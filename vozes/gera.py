@@ -1,7 +1,7 @@
 # Robô de dublagem: gera cada fala na ElevenLabs e monta os pacotes vox_*.js que o jogo carrega.
 import json,os,sys,time,base64,urllib.request,urllib.error,collections
 KEY=os.environ.get('ELEVENLABS_API_KEY','').strip()
-if not KEY:sys.exit('Falta o segredo ELEVENLABS_API_KEY nas configurações do repositório.')
+if not KEY:sys.exit('Falta o segredo CHAVE nas configurações do repositório.')
 F=json.load(open('vozes/falas.json'));V=json.load(open('vozes/vozes.json'));os.makedirs('vozes/mp3',exist_ok=True)
 LIM=int(os.environ.get('LIMITE','0') or 0)  # 0 = sem limite de caracteres nesta rodada
 feitos=0;gastos=0;erros=0

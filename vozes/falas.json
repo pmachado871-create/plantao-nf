@@ -1114,6 +1114,106 @@
 "MULHER",
 "pc"
 ],
+"v2894af65": [
+"Polícia! Larga a arma!",
+"HOMEM1",
+"extra"
+],
+"v9ef04e39": [
+"Polícia! Parado aí!",
+"HOMEM1",
+"extra"
+],
+"v7ebe9772": [
+"Larga a arma! Agora!",
+"HOMEM1",
+"extra"
+],
+"v1e0cd81f": [
+"Mão na cabeça!",
+"HOMEM1",
+"extra"
+],
+"v2f4af2a9": [
+"Você está preso.",
+"HOMEM1",
+"extra"
+],
+"v5e0cba00": [
+"Tá preso. Tem o direito de ficar calado.",
+"HOMEM1",
+"extra"
+],
+"vde058f71": [
+"Algemado. Vamos.",
+"HOMEM1",
+"extra"
+],
+"v3513525e": [
+"Polícia! Mão na cabeça! Ninguém se mexe!",
+"HOMEM1",
+"extra"
+],
+"v64f34e24": [
+"Não atira! Eu me rendo!",
+"HOMEM2",
+"extra"
+],
+"v5e31a658": [
+"Tá bom, tá bom! Não atira!",
+"HOMEM2",
+"extra"
+],
+"v73c27a77": [
+"Calma, calma! Eu me rendo!",
+"HOMEM2",
+"extra"
+],
+"v170992f7": [
+"Sujou! Sujou! Polícia!",
+"HOMEM2",
+"extra"
+],
+"v08c0f582": [
+"Olha a polícia! Corre!",
+"HOMEM2",
+"extra"
+],
+"v8e793bf5": [
+"Os homens tão chegando! Corre!",
+"HOMEM2",
+"extra"
+],
+"va76ea5f6": [
+"COPOM para viaturas. Denúncia anônima de tráfico na Comunidade da Serrinha. Quem pode verificar?",
+"MULHER",
+"extra"
+],
+"v7aa7bd42": [
+"COPOM para viaturas. Denúncia anônima de tráfico na Morro do Encanto. Quem pode verificar?",
+"MULHER",
+"extra"
+],
+"v89299298": [
+"COPOM para viaturas. Denúncia anônima de tráfico na Vila Esperança. Quem pode verificar?",
+"MULHER",
+"extra"
+],
+"v959f3e29": [
+"COPOM para viaturas. Denúncia anônima de tráfico na Morro da Caixa d'Água. Quem pode verificar?",
+"MULHER",
+"extra"
+],
+"v4e7cdb8d": [
+"COPOM para viaturas. Denúncia anônima de tráfico na Comunidade do Beco Verde. Quem pode verificar?",
+"MULHER",
+"extra"
+],
+"v69cca700": [
+"COPOM para viaturas. Denúncia anônima de tráfico na Vila São Jorge. Quem pode verificar?",
+"MULHER",
+"extra"
+],
 "vc7792567": [
 "Seja bem-vindo à Promotoria, doutor. Aqui a denúncia nasce no local do crime, não no papel.",
 "MULHER",
@@ -1894,146 +1994,6 @@
 "HOMEM1",
 "dpu"
 ],
-"v8773749d": [
-"Bem-vindo ao Fórum, Excelência. A comarca inteira passa por esta sala.",
-"HOMEM2",
-"tj"
-],
-"vbcedd332": [
-"Seu primeiro dia na comarca: uma lei nova mudou regras de contratos, e as partes discutem se ela vale para um acordo assinado antes.",
-"HOMEM2",
-"tj"
-],
-"v98ed1ae9": [
-"Outra lei, revogada, voltaria a valer?",
-"HOMEM2",
-"tj"
-],
-"v760c7600": [
-"Davi, de 17 anos, quer abrir uma empresa. A avó dele tem uma deficiência intelectual e assinou um contrato.",
-"HOMEM2",
-"tj"
-],
-"vf4284595": [
-"Uma família pede a declaração de morte de um parente que sumiu num naufrágio.",
-"HOMEM2",
-"tj"
-],
-"v3fdc38f2": [
-"A citação de Lívia falhou: ela mora metade da semana na capital e metade na praia.",
-"HOMEM2",
-"tj"
-],
-"vd5fba58b": [
-"Ela também processa uma revista que usou sua imagem sem autorização.",
-"HOMEM2",
-"tj"
-],
-"v35f89ac4": [
-"Amaral ganhou uma ação contra uma empresa, mas ela está vazia. Os sócios usam a conta da empresa para pagar despesas pessoais.",
-"HOMEM2",
-"tj"
-],
-"vd1a2cbfb": [
-"Ao mesmo tempo, uma associação expulsou um associado sem ouvi-lo.",
-"HOMEM2",
-"tj"
-],
-"vb8bd20de": [
-"Seu Damião foi fiador de um aluguel comercial do sobrinho. Agora o credor quer penhorar a única casa dele.",
-"HOMEM2",
-"tj"
-],
-"v6bd87508": [
-"Na mesma execução, discute-se o que acompanha a casa vendida.",
-"HOMEM2",
-"tj"
-],
-"ve8c69e62": [
-"Dona Luzia vendeu sua casa por um terço do valor para pagar a cirurgia urgente do neto. O comprador sabia da situação.",
-"HOMEM2",
-"tj"
-],
-"vae8374d0": [
-"Em outro processo, um contrato foi assinado sob ameaça.",
-"HOMEM2",
-"tj"
-],
-"v7e4ae1d0": [
-"Num mesmo dia: um contrato assinado por uma criança de 12 anos, uma venda de imóvel caro feita por contrato particular e uma doação com condição suspensiva que ainda não ocorreu.",
-"HOMEM2",
-"tj"
-],
-"v042eacb2": [
-"Renata processa um motorista por um acidente de 4 anos atrás. Um credor cobra uma nota promissória antiga. Um casal discute dívidas entre eles.",
-"HOMEM2",
-"tj"
-],
-"vd3bb3ff8": [
-"Tudo gira em torno do tempo.",
-"HOMEM2",
-"tj"
-],
-"vc374e46a": [
-"Um grupo invadiu o sítio de Otávio há 3 semanas. Ele quer expulsá-los à força. O caseiro diz que também tem posse.",
-"HOMEM2",
-"tj"
-],
-"v061046bf": [
-"E um ladrão de gado alega que, depois de tanto tempo, é possuidor dos animais.",
-"HOMEM2",
-"tj"
-],
-"v622807ca": [
-"Dona Cida mora há 6 anos num terreno urbano de 200 m² abandonado pelo dono. Uma ex-mulher ficou sozinha na casa depois que o marido sumiu há 2 anos.",
-"HOMEM2",
-"tj"
-],
-"v178895a5": [
-"Um sitiante planta há 12 anos.",
-"HOMEM2",
-"tj"
-],
-"v543693de": [
-"Barros vendeu um apartamento a Cida por contrato de compra e venda não registrado. Depois, um credor de Barros penhorou o imóvel.",
-"HOMEM2",
-"tj"
-],
-"v303f997b": [
-"Cida entra com embargos de terceiro.",
-"HOMEM2",
-"tj"
-],
-"v978211a7": [
-"Um morador faz festas toda semana, quebra o elevador e ameaça vizinhos.",
-"HOMEM2",
-"tj"
-],
-"v76b9e2c5": [
-"O condomínio quer multá-lo pesado, mudar a convenção e cobrar dívidas do novo dono do apartamento.",
-"HOMEM2",
-"tj"
-],
-"v674d22e6": [
-"Na Câmara, você relata apelações: um golpe bancário, um acidente com causas sucessivas e uma empresa de explosivos que causou danos a vizinhos sem culpa comprovada.",
-"HOMEM2",
-"tj"
-],
-"v31bca63c": [
-"Uma empresa negativada indevidamente, um adolescente que quebrou o carro do vizinho e uma vítima com cicatriz no rosto chegam à Câmara.",
-"HOMEM2",
-"tj"
-],
-"v1642ee8e": [
-"Contratos em crise: uma multa maior que a dívida, uma alta extraordinária de preços que arruinou um fornecedor e um carro usado com defeito oculto.",
-"HOMEM2",
-"tj"
-],
-"v08b478a4": [
-"Antes da sua promoção ao Tribunal, a última pauta como juiz convocado: um acidente de ônibus, uma carona, um contrato descumprido e uma reportagem sobre um crime antigo.",
-"HOMEM2",
-"tj"
-],
 "vc35e8e5e": [
 "Bem-vindo à Procuradoria-Seccional da União. Defendemos o patrimônio de todos.",
 "HOMEM1",
@@ -2478,266 +2438,6 @@
 "Antes da sua nomeação como embaixador, você chefia a delegação brasileira numa disputa de fronteira marítima com outro país e precisa escolher o foro certo.",
 "HOMEM1",
 "mre"
-],
-"vec2ae66c": [
-"Bem-vinda à análise criminal. Aqui o crime vira mapa, e o mapa vira prevenção.",
-"MULHER",
-"nac"
-],
-"vf45b3955": [
-"Seu primeiro dia num núcleo de análise criminal.",
-"MULHER",
-"nac"
-],
-"v914beea7": [
-"A pesquisadora-chefe quer saber se você domina o básico antes de mexer nos dados de homicídios do estado.",
-"MULHER",
-"nac"
-],
-"v43d59c2b": [
-"O mapa mostra uma mancha de ocorrências crescendo. Precisamos decidir onde agir.",
-"MULHER",
-"nac"
-],
-"va25d20d6": [
-"Num bairro com muitos furtos, ninguém registra ocorrência. A família, a escola e a igreja tentam conter os jovens, enquanto a polícia aparece pouco.",
-"MULHER",
-"nac"
-],
-"v051c25da": [
-"Você mapeia o controle social da área.",
-"MULHER",
-"nac"
-],
-"v8be8e86c": [
-"Um cadete pergunta se é verdade que dá para reconhecer um criminoso pelo formato do crânio.",
-"MULHER",
-"nac"
-],
-"vae87c660": [
-"Você aproveita para explicar as escolas clássicas da criminologia.",
-"MULHER",
-"nac"
-],
-"v0ecee203": [
-"O mapa mostra que os crimes se concentram sempre nas mesmas áreas da cidade, independentemente de quem mora lá.",
-"MULHER",
-"nac"
-],
-"v068f0496": [
-"O secretário quer entender por quê, antes de decidir onde investir.",
-"MULHER",
-"nac"
-],
-"v9b404426": [
-"Davi foi preso aos 18 anos por um furto pequeno. Depois de sair, ninguém lhe deu emprego e ele voltou a delinquir.",
-"MULHER",
-"nac"
-],
-"vd572a769": [
-"Você estuda o caso para um programa de egressos.",
-"MULHER",
-"nac"
-],
-"v811f967f": [
-"Num seminário, uma pesquisadora defende abolir as prisões e uma promotora defende o direito penal mínimo.",
-"MULHER",
-"nac"
-],
-"vb6ab4783": [
-"Você precisa resumir as correntes para um relatório.",
-"MULHER",
-"nac"
-],
-"v6239653c": [
-"O prefeito quer copiar a “tolerância zero” de Nova York. Um bairro tem casas abandonadas, pichações e lixo.",
-"MULHER",
-"nac"
-],
-"v4653e759": [
-"Você precisa explicar a teoria e seus limites.",
-"MULHER",
-"nac"
-],
-"v2e8d495d": [
-"O Conselho de Segurança debate qual modelo adotar num programa para jovens infratores: punir para intimidar, tratar para reintegrar ou reparar o dano com a vítima.",
-"MULHER",
-"nac"
-],
-"v8c65a9ea": [
-"Renata foi vítima de violência sexual. No processo, foi humilhada na audiência. Depois, perdeu o emprego.",
-"MULHER",
-"nac"
-],
-"vaaa39b1c": [
-"Você cria um protocolo para evitar novos danos às vítimas.",
-"MULHER",
-"nac"
-],
-"va4c4e6b9": [
-"Você tem um orçamento para prevenção e três propostas: creches e emprego para o bairro, policiamento nos pontos quentes e um programa para egressos do sistema prisional.",
-"MULHER",
-"nac"
-],
-"v5ef844e5": [
-"A prefeitura vai reformar uma praça onde há muitos roubos. Você leva propostas de prevenção pelo desenho urbano.",
-"MULHER",
-"nac"
-],
-"v7bdbe53c": [
-"Um empresário respeitado fraudou contratos públicos durante anos. Nunca foi preso. Você analisa o caso para um relatório sobre crimes das elites.",
-"MULHER",
-"nac"
-],
-"vbde3ceb2": [
-"Como Secretário Estadual de Segurança, você precisa integrar as polícias, os dados e o orçamento com a União. O SUSP é a ferramenta.",
-"MULHER",
-"nac"
-],
-"vea94d42e": [
-"No centro integrado, o painel mostra manchas de calor de roubos. A PM quer saber onde colocar as viaturas.",
-"MULHER",
-"nac"
-],
-"v130e6f5f": [
-"Você aplica os métodos de análise criminal.",
-"MULHER",
-"nac"
-],
-"vaf061ebc": [
-"Você visita um presídio superlotado, dominado por facções. Os presos que saem voltam a delinquir em pouco tempo. É preciso um plano para o sistema.",
-"MULHER",
-"nac"
-],
-"ve64952a1": [
-"Antes de assumir a Secretaria Nacional, você apresenta ao ministro um plano para reduzir homicídios no país.",
-"MULHER",
-"nac"
-],
-"v2e993ac8": [
-"Ele quer saber em que teorias e evidências você se apoia.",
-"MULHER",
-"nac"
-],
-"v95fda30f": [
-"Bem-vindo à Procuradoria Federal. Fraude previdenciária tira de quem mais precisa.",
-"MULHER",
-"pgf"
-],
-"vb02c8255": [
-"Seu Damião, de 66 anos, nunca contribuiu e não tem renda. Ele pede “aposentadoria” ao INSS. Uma vizinha quer atendimento no SUS sem ser contribuinte.",
-"MULHER",
-"pgf"
-],
-"v9aa8b4eb": [
-"Você orienta a agência.",
-"MULHER",
-"pgf"
-],
-"vc3a39e36": [
-"Um servidor comissionado sem cargo efetivo, uma dona de casa que quer contribuir e um motorista de aplicativo pedem orientação sobre como se filiar ao INSS.",
-"MULHER",
-"pgf"
-],
-"vfd954aa8": [
-"Um segurado morreu. A viúva, a mãe dele e um irmão pedem pensão. Para complicar, a viúva foi denunciada por participação na morte.",
-"MULHER",
-"pgf"
-],
-"v474f01da": [
-"No Juizado, você representa o INSS em ações de segurados: um autônomo que quer auxílio-acidente, um aposentado que quer acumular benefícios e um desempregado que perdeu a qualidade de segurado.",
-"MULHER",
-"pgf"
-],
-"v128a2c50": [
-"Uma grande empresa contesta contribuições para a seguridade.",
-"MULHER",
-"pgf"
-],
-"v46956a54": [
-"Ao mesmo tempo, o INSS quer saber se receitas de loterias e de leilões entram no orçamento da seguridade.",
-"MULHER",
-"pgf"
-],
-"ve428043f": [
-"Uma lei aumentou uma contribuição social em novembro. A empresa diz que só pode ser cobrada no ano seguinte.",
-"MULHER",
-"pgf"
-],
-"v0b11b896": [
-"Em outra execução, a União cobra contribuições de 12 anos atrás.",
-"MULHER",
-"pgf"
-],
-"va8c7a4c9": [
-"Uma indústria descontou o INSS dos empregados por dois anos e não repassou. A empresa pagou tudo depois.",
-"MULHER",
-"pgf"
-],
-"v24829187": [
-"Sandra, a recepcionista, também foi investigada.",
-"MULHER",
-"pgf"
-],
-"v41a7cc1c": [
-"Uma servidora do INSS inseriu dados falsos para conceder aposentadorias a pessoas que nunca trabalharam. Um beneficiário recebeu por 8 anos.",
-"MULHER",
-"pgf"
-],
-"v15ffa9a9": [
-"O caso vai a julgamento.",
-"MULHER",
-"pgf"
-],
-"v6e8b913a": [
-"Depois da Reforma da Previdência, chovem dúvidas: uma professora, um trabalhador rural e um metalúrgico exposto a ruído querem saber quando podem se aposentar.",
-"MULHER",
-"pgf"
-],
-"vda55dc96": [
-"Seu Damião sofreu um AVC e precisa de cuidador. Outro segurado já tinha uma doença quando se filiou. Um empregado está afastado há 20 dias.",
-"MULHER",
-"pgf"
-],
-"v5ec4f540": [
-"Dona Luzia teve o benefício concedido em 2005 e só agora pede revisão do cálculo.",
-"MULHER",
-"pgf"
-],
-"vdbac3e82": [
-"Outro segurado teve o pedido indeferido há 12 anos e entra com ação.",
-"MULHER",
-"pgf"
-],
-"ve1f4f924": [
-"Uma viúva com dois filhos pede pensão. Uma senhora que recebe BPC quer deixar o benefício para o neto. E uma pessoa com deficiência pede BPC.",
-"MULHER",
-"pgf"
-],
-"v3963420b": [
-"Um estado quer criar dois regimes próprios para servidores, e o governo federal discute abrir parte do seguro de acidentes ao setor privado.",
-"MULHER",
-"pgf"
-],
-"v29397b15": [
-"Você emite os pareceres.",
-"MULHER",
-"pgf"
-],
-"v1e607597": [
-"Centenas de ações contra o INSS chegam sem pedido administrativo prévio. Algumas são de acidente de trabalho. Outras ultrapassam o valor do Juizado.",
-"MULHER",
-"pgf"
-],
-"vb58d1ba8": [
-"Uma força-tarefa da PF, do INSS e da Procuradoria descobre uma quadrilha que fraudava salários-maternidade e aposentadorias rurais com documentos falsos.",
-"MULHER",
-"pgf"
-],
-"v1691f74c": [
-"Antes de assumir a Procuradoria-Geral Federal, você prepara a defesa do INSS em temas nacionais: aposentadoria da pessoa com deficiência, aposentadoria especial e o futuro da seguridade.",
-"MULHER",
-"pgf"
 ],
 "v4d3a34ca": [
 "Bem-vindo à Delegacia da Receita. Nota fria esquenta rápido quando a gente chega.",
@@ -3609,105 +3309,405 @@
 "MULHER",
 "cac"
 ],
-"v2894af65": [
-"Polícia! Larga a arma!",
-"HOMEM1",
-"extra"
-],
-"v9ef04e39": [
-"Polícia! Parado aí!",
-"HOMEM1",
-"extra"
-],
-"v7ebe9772": [
-"Larga a arma! Agora!",
-"HOMEM1",
-"extra"
-],
-"v1e0cd81f": [
-"Mão na cabeça!",
-"HOMEM1",
-"extra"
-],
-"v2f4af2a9": [
-"Você está preso.",
-"HOMEM1",
-"extra"
-],
-"v5e0cba00": [
-"Tá preso. Tem o direito de ficar calado.",
-"HOMEM1",
-"extra"
-],
-"vde058f71": [
-"Algemado. Vamos.",
-"HOMEM1",
-"extra"
-],
-"v3513525e": [
-"Polícia! Mão na cabeça! Ninguém se mexe!",
-"HOMEM1",
-"extra"
-],
-"v64f34e24": [
-"Não atira! Eu me rendo!",
+"v8773749d": [
+"Bem-vindo ao Fórum, Excelência. A comarca inteira passa por esta sala.",
 "HOMEM2",
-"extra"
+"tj"
 ],
-"v5e31a658": [
-"Tá bom, tá bom! Não atira!",
+"vbcedd332": [
+"Seu primeiro dia na comarca: uma lei nova mudou regras de contratos, e as partes discutem se ela vale para um acordo assinado antes.",
 "HOMEM2",
-"extra"
+"tj"
 ],
-"v73c27a77": [
-"Calma, calma! Eu me rendo!",
+"v98ed1ae9": [
+"Outra lei, revogada, voltaria a valer?",
 "HOMEM2",
-"extra"
+"tj"
 ],
-"v170992f7": [
-"Sujou! Sujou! Polícia!",
+"v760c7600": [
+"Davi, de 17 anos, quer abrir uma empresa. A avó dele tem uma deficiência intelectual e assinou um contrato.",
 "HOMEM2",
-"extra"
+"tj"
 ],
-"v08c0f582": [
-"Olha a polícia! Corre!",
+"vf4284595": [
+"Uma família pede a declaração de morte de um parente que sumiu num naufrágio.",
 "HOMEM2",
-"extra"
+"tj"
 ],
-"v8e793bf5": [
-"Os homens tão chegando! Corre!",
+"v3fdc38f2": [
+"A citação de Lívia falhou: ela mora metade da semana na capital e metade na praia.",
 "HOMEM2",
-"extra"
+"tj"
 ],
-"va76ea5f6": [
-"COPOM para viaturas. Denúncia anônima de tráfico na Comunidade da Serrinha. Quem pode verificar?",
-"MULHER",
-"extra"
+"vd5fba58b": [
+"Ela também processa uma revista que usou sua imagem sem autorização.",
+"HOMEM2",
+"tj"
 ],
-"v7aa7bd42": [
-"COPOM para viaturas. Denúncia anônima de tráfico na Morro do Encanto. Quem pode verificar?",
-"MULHER",
-"extra"
+"v35f89ac4": [
+"Amaral ganhou uma ação contra uma empresa, mas ela está vazia. Os sócios usam a conta da empresa para pagar despesas pessoais.",
+"HOMEM2",
+"tj"
 ],
-"v89299298": [
-"COPOM para viaturas. Denúncia anônima de tráfico na Vila Esperança. Quem pode verificar?",
-"MULHER",
-"extra"
+"vd1a2cbfb": [
+"Ao mesmo tempo, uma associação expulsou um associado sem ouvi-lo.",
+"HOMEM2",
+"tj"
 ],
-"v959f3e29": [
-"COPOM para viaturas. Denúncia anônima de tráfico na Morro da Caixa d'Água. Quem pode verificar?",
-"MULHER",
-"extra"
+"vb8bd20de": [
+"Seu Damião foi fiador de um aluguel comercial do sobrinho. Agora o credor quer penhorar a única casa dele.",
+"HOMEM2",
+"tj"
 ],
-"v4e7cdb8d": [
-"COPOM para viaturas. Denúncia anônima de tráfico na Comunidade do Beco Verde. Quem pode verificar?",
-"MULHER",
-"extra"
+"v6bd87508": [
+"Na mesma execução, discute-se o que acompanha a casa vendida.",
+"HOMEM2",
+"tj"
 ],
-"v69cca700": [
-"COPOM para viaturas. Denúncia anônima de tráfico na Vila São Jorge. Quem pode verificar?",
+"ve8c69e62": [
+"Dona Luzia vendeu sua casa por um terço do valor para pagar a cirurgia urgente do neto. O comprador sabia da situação.",
+"HOMEM2",
+"tj"
+],
+"vae8374d0": [
+"Em outro processo, um contrato foi assinado sob ameaça.",
+"HOMEM2",
+"tj"
+],
+"v7e4ae1d0": [
+"Num mesmo dia: um contrato assinado por uma criança de 12 anos, uma venda de imóvel caro feita por contrato particular e uma doação com condição suspensiva que ainda não ocorreu.",
+"HOMEM2",
+"tj"
+],
+"v042eacb2": [
+"Renata processa um motorista por um acidente de 4 anos atrás. Um credor cobra uma nota promissória antiga. Um casal discute dívidas entre eles.",
+"HOMEM2",
+"tj"
+],
+"vd3bb3ff8": [
+"Tudo gira em torno do tempo.",
+"HOMEM2",
+"tj"
+],
+"vc374e46a": [
+"Um grupo invadiu o sítio de Otávio há 3 semanas. Ele quer expulsá-los à força. O caseiro diz que também tem posse.",
+"HOMEM2",
+"tj"
+],
+"v061046bf": [
+"E um ladrão de gado alega que, depois de tanto tempo, é possuidor dos animais.",
+"HOMEM2",
+"tj"
+],
+"v622807ca": [
+"Dona Cida mora há 6 anos num terreno urbano de 200 m² abandonado pelo dono. Uma ex-mulher ficou sozinha na casa depois que o marido sumiu há 2 anos.",
+"HOMEM2",
+"tj"
+],
+"v178895a5": [
+"Um sitiante planta há 12 anos.",
+"HOMEM2",
+"tj"
+],
+"v543693de": [
+"Barros vendeu um apartamento a Cida por contrato de compra e venda não registrado. Depois, um credor de Barros penhorou o imóvel.",
+"HOMEM2",
+"tj"
+],
+"v303f997b": [
+"Cida entra com embargos de terceiro.",
+"HOMEM2",
+"tj"
+],
+"v978211a7": [
+"Um morador faz festas toda semana, quebra o elevador e ameaça vizinhos.",
+"HOMEM2",
+"tj"
+],
+"v76b9e2c5": [
+"O condomínio quer multá-lo pesado, mudar a convenção e cobrar dívidas do novo dono do apartamento.",
+"HOMEM2",
+"tj"
+],
+"v674d22e6": [
+"Na Câmara, você relata apelações: um golpe bancário, um acidente com causas sucessivas e uma empresa de explosivos que causou danos a vizinhos sem culpa comprovada.",
+"HOMEM2",
+"tj"
+],
+"v31bca63c": [
+"Uma empresa negativada indevidamente, um adolescente que quebrou o carro do vizinho e uma vítima com cicatriz no rosto chegam à Câmara.",
+"HOMEM2",
+"tj"
+],
+"v1642ee8e": [
+"Contratos em crise: uma multa maior que a dívida, uma alta extraordinária de preços que arruinou um fornecedor e um carro usado com defeito oculto.",
+"HOMEM2",
+"tj"
+],
+"v08b478a4": [
+"Antes da sua promoção ao Tribunal, a última pauta como juiz convocado: um acidente de ônibus, uma carona, um contrato descumprido e uma reportagem sobre um crime antigo.",
+"HOMEM2",
+"tj"
+],
+"vec2ae66c": [
+"Bem-vinda à análise criminal. Aqui o crime vira mapa, e o mapa vira prevenção.",
 "MULHER",
-"extra"
+"nac"
+],
+"vf45b3955": [
+"Seu primeiro dia num núcleo de análise criminal.",
+"MULHER",
+"nac"
+],
+"v914beea7": [
+"A pesquisadora-chefe quer saber se você domina o básico antes de mexer nos dados de homicídios do estado.",
+"MULHER",
+"nac"
+],
+"v43d59c2b": [
+"O mapa mostra uma mancha de ocorrências crescendo. Precisamos decidir onde agir.",
+"MULHER",
+"nac"
+],
+"va25d20d6": [
+"Num bairro com muitos furtos, ninguém registra ocorrência. A família, a escola e a igreja tentam conter os jovens, enquanto a polícia aparece pouco.",
+"MULHER",
+"nac"
+],
+"v051c25da": [
+"Você mapeia o controle social da área.",
+"MULHER",
+"nac"
+],
+"v8be8e86c": [
+"Um cadete pergunta se é verdade que dá para reconhecer um criminoso pelo formato do crânio.",
+"MULHER",
+"nac"
+],
+"vae87c660": [
+"Você aproveita para explicar as escolas clássicas da criminologia.",
+"MULHER",
+"nac"
+],
+"v0ecee203": [
+"O mapa mostra que os crimes se concentram sempre nas mesmas áreas da cidade, independentemente de quem mora lá.",
+"MULHER",
+"nac"
+],
+"v068f0496": [
+"O secretário quer entender por quê, antes de decidir onde investir.",
+"MULHER",
+"nac"
+],
+"v9b404426": [
+"Davi foi preso aos 18 anos por um furto pequeno. Depois de sair, ninguém lhe deu emprego e ele voltou a delinquir.",
+"MULHER",
+"nac"
+],
+"vd572a769": [
+"Você estuda o caso para um programa de egressos.",
+"MULHER",
+"nac"
+],
+"v811f967f": [
+"Num seminário, uma pesquisadora defende abolir as prisões e uma promotora defende o direito penal mínimo.",
+"MULHER",
+"nac"
+],
+"vb6ab4783": [
+"Você precisa resumir as correntes para um relatório.",
+"MULHER",
+"nac"
+],
+"v6239653c": [
+"O prefeito quer copiar a “tolerância zero” de Nova York. Um bairro tem casas abandonadas, pichações e lixo.",
+"MULHER",
+"nac"
+],
+"v4653e759": [
+"Você precisa explicar a teoria e seus limites.",
+"MULHER",
+"nac"
+],
+"v2e8d495d": [
+"O Conselho de Segurança debate qual modelo adotar num programa para jovens infratores: punir para intimidar, tratar para reintegrar ou reparar o dano com a vítima.",
+"MULHER",
+"nac"
+],
+"v8c65a9ea": [
+"Renata foi vítima de violência sexual. No processo, foi humilhada na audiência. Depois, perdeu o emprego.",
+"MULHER",
+"nac"
+],
+"vaaa39b1c": [
+"Você cria um protocolo para evitar novos danos às vítimas.",
+"MULHER",
+"nac"
+],
+"va4c4e6b9": [
+"Você tem um orçamento para prevenção e três propostas: creches e emprego para o bairro, policiamento nos pontos quentes e um programa para egressos do sistema prisional.",
+"MULHER",
+"nac"
+],
+"v5ef844e5": [
+"A prefeitura vai reformar uma praça onde há muitos roubos. Você leva propostas de prevenção pelo desenho urbano.",
+"MULHER",
+"nac"
+],
+"v7bdbe53c": [
+"Um empresário respeitado fraudou contratos públicos durante anos. Nunca foi preso. Você analisa o caso para um relatório sobre crimes das elites.",
+"MULHER",
+"nac"
+],
+"vbde3ceb2": [
+"Como Secretário Estadual de Segurança, você precisa integrar as polícias, os dados e o orçamento com a União. O SUSP é a ferramenta.",
+"MULHER",
+"nac"
+],
+"vea94d42e": [
+"No centro integrado, o painel mostra manchas de calor de roubos. A PM quer saber onde colocar as viaturas.",
+"MULHER",
+"nac"
+],
+"v130e6f5f": [
+"Você aplica os métodos de análise criminal.",
+"MULHER",
+"nac"
+],
+"vaf061ebc": [
+"Você visita um presídio superlotado, dominado por facções. Os presos que saem voltam a delinquir em pouco tempo. É preciso um plano para o sistema.",
+"MULHER",
+"nac"
+],
+"ve64952a1": [
+"Antes de assumir a Secretaria Nacional, você apresenta ao ministro um plano para reduzir homicídios no país.",
+"MULHER",
+"nac"
+],
+"v2e993ac8": [
+"Ele quer saber em que teorias e evidências você se apoia.",
+"MULHER",
+"nac"
+],
+"v95fda30f": [
+"Bem-vindo à Procuradoria Federal. Fraude previdenciária tira de quem mais precisa.",
+"MULHER",
+"pgf"
+],
+"vb02c8255": [
+"Seu Damião, de 66 anos, nunca contribuiu e não tem renda. Ele pede “aposentadoria” ao INSS. Uma vizinha quer atendimento no SUS sem ser contribuinte.",
+"MULHER",
+"pgf"
+],
+"v9aa8b4eb": [
+"Você orienta a agência.",
+"MULHER",
+"pgf"
+],
+"vc3a39e36": [
+"Um servidor comissionado sem cargo efetivo, uma dona de casa que quer contribuir e um motorista de aplicativo pedem orientação sobre como se filiar ao INSS.",
+"MULHER",
+"pgf"
+],
+"vfd954aa8": [
+"Um segurado morreu. A viúva, a mãe dele e um irmão pedem pensão. Para complicar, a viúva foi denunciada por participação na morte.",
+"MULHER",
+"pgf"
+],
+"v474f01da": [
+"No Juizado, você representa o INSS em ações de segurados: um autônomo que quer auxílio-acidente, um aposentado que quer acumular benefícios e um desempregado que perdeu a qualidade de segurado.",
+"MULHER",
+"pgf"
+],
+"v128a2c50": [
+"Uma grande empresa contesta contribuições para a seguridade.",
+"MULHER",
+"pgf"
+],
+"v46956a54": [
+"Ao mesmo tempo, o INSS quer saber se receitas de loterias e de leilões entram no orçamento da seguridade.",
+"MULHER",
+"pgf"
+],
+"ve428043f": [
+"Uma lei aumentou uma contribuição social em novembro. A empresa diz que só pode ser cobrada no ano seguinte.",
+"MULHER",
+"pgf"
+],
+"v0b11b896": [
+"Em outra execução, a União cobra contribuições de 12 anos atrás.",
+"MULHER",
+"pgf"
+],
+"va8c7a4c9": [
+"Uma indústria descontou o INSS dos empregados por dois anos e não repassou. A empresa pagou tudo depois.",
+"MULHER",
+"pgf"
+],
+"v24829187": [
+"Sandra, a recepcionista, também foi investigada.",
+"MULHER",
+"pgf"
+],
+"v41a7cc1c": [
+"Uma servidora do INSS inseriu dados falsos para conceder aposentadorias a pessoas que nunca trabalharam. Um beneficiário recebeu por 8 anos.",
+"MULHER",
+"pgf"
+],
+"v15ffa9a9": [
+"O caso vai a julgamento.",
+"MULHER",
+"pgf"
+],
+"v6e8b913a": [
+"Depois da Reforma da Previdência, chovem dúvidas: uma professora, um trabalhador rural e um metalúrgico exposto a ruído querem saber quando podem se aposentar.",
+"MULHER",
+"pgf"
+],
+"vda55dc96": [
+"Seu Damião sofreu um AVC e precisa de cuidador. Outro segurado já tinha uma doença quando se filiou. Um empregado está afastado há 20 dias.",
+"MULHER",
+"pgf"
+],
+"v5ec4f540": [
+"Dona Luzia teve o benefício concedido em 2005 e só agora pede revisão do cálculo.",
+"MULHER",
+"pgf"
+],
+"vdbac3e82": [
+"Outro segurado teve o pedido indeferido há 12 anos e entra com ação.",
+"MULHER",
+"pgf"
+],
+"ve1f4f924": [
+"Uma viúva com dois filhos pede pensão. Uma senhora que recebe BPC quer deixar o benefício para o neto. E uma pessoa com deficiência pede BPC.",
+"MULHER",
+"pgf"
+],
+"v3963420b": [
+"Um estado quer criar dois regimes próprios para servidores, e o governo federal discute abrir parte do seguro de acidentes ao setor privado.",
+"MULHER",
+"pgf"
+],
+"v29397b15": [
+"Você emite os pareceres.",
+"MULHER",
+"pgf"
+],
+"v1e607597": [
+"Centenas de ações contra o INSS chegam sem pedido administrativo prévio. Algumas são de acidente de trabalho. Outras ultrapassam o valor do Juizado.",
+"MULHER",
+"pgf"
+],
+"vb58d1ba8": [
+"Uma força-tarefa da PF, do INSS e da Procuradoria descobre uma quadrilha que fraudava salários-maternidade e aposentadorias rurais com documentos falsos.",
+"MULHER",
+"pgf"
+],
+"v1691f74c": [
+"Antes de assumir a Procuradoria-Geral Federal, você prepara a defesa do INSS em temas nacionais: aposentadoria da pessoa com deficiência, aposentadoria especial e o futuro da seguridade.",
+"MULHER",
+"pgf"
 ],
 "L_A": [
 "A.",
