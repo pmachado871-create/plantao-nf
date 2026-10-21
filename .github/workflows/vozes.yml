@@ -1,0 +1,29 @@
+name: Gerar vozes (ElevenLabs)
+on:
+  workflow_dispatch:
+    inputs:
+      limite:
+        description: 'Máximo de caracteres nesta rodada (0 = tudo)'
+        required: false
+        default: '0'
+permissions:
+  contents: write
+concurrency: vozes
+jobs:
+  vozes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - name: Gerar falas e pacotes
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          LIMITE: ${{ github.event.inputs.limite }}
+        run: python3 vozes/gera.py
+      - name: Salvar no repositório
+        run: |
+          git config user.name "robo-vozes"
+          git config user.email "robo-vozes@users.noreply.github.com"
+          git add vozes/mp3 vox_*.js || true
+          git diff --cached --quiet || git commit -m "Vozes geradas pela ElevenLabs"
+          git push
