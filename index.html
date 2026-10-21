@@ -224,7 +224,7 @@ body.hasdist #help{transform:translateY(46px)}
 <div id="wasted"><b class="stroke">VOCÊ FOI FERIDO</b></div>
 <div id="pause" hidden>
  <nav id="pmenu"><h1>PLANTÃO<br>NOVA FRIBURGO</h1>
-  <button data-p="resume">Retomar</button><button data-p="map" class="on">Mapa</button><button data-p="stats">Estatísticas</button><button data-p="brief">Breve</button><button data-p="estudo">Caderno de erros</button><button data-p="opts">Opções</button><button data-p="save">Salvar jogo</button><button data-p="quit">Menu inicial</button></nav>
+  <button data-p="resume">Retomar</button><button data-p="map" class="on">Mapa</button><button data-p="stats">Estatísticas</button><button data-p="brief">Breve</button><button data-p="estudo">Caderno de erros</button><button data-p="opts">Opções</button><button data-p="save">Salvar jogo</button><button data-p="unstuck">Destravar</button><button data-p="quit">Menu inicial</button></nav>
  <div id="pbody"><canvas id="pmap"></canvas><div id="pmaphint">Toque no mapa para marcar o destino. Toque de novo no marcador para remover.</div>
   <div id="plegend"><i style="background:#fff"></i>Você<i style="background:#d9b23a"></i>Federal (redondo)<i style="background:#4aa3ff;border-radius:0"></i>Estadual (quadrado)<br><b style="color:#c08af0">✂</b> Barbearia · <b style="color:#ff7ab0">T</b> Roupas · <b style="color:#ffa040">R</b> Restaurante · <b style="color:#ffd040">L</b> Lanchonete · <b style="color:#e05a3a">B</b> Bar · <b style="color:#4ad0a0">A</b> Academia · <b style="color:#5fe08a">+</b> Farmácia · <b style="color:#9ab0c8">O</b> Oficina<i style="background:#f0c43c;border-radius:2px"></i>Objetivo<i style="background:#ff4fd8"></i>Destino marcado<i style="background:#ff3b30"></i>Suspeito</div>
   <div id="ptext" hidden></div></div>
@@ -6587,7 +6587,7 @@ function bindControls(){const joy=$('#joy'),knob=$('#knob'),zone=$('#joyzone');l
  tap('#bReload',()=>press('r'));tap('#bCrouch',()=>press('c'));tap('#bJump',()=>press('j'));tap('#bEnter',()=>{if(HUD.promptFn){HUD.promptFn();HUD.promptFn=null;}else press('f');});tap('#bExit',()=>press('f'));tap('#bSiren',()=>press('h'));tap('#bTarget',()=>press('tab'));
  $('#prompt').addEventListener('pointerdown',e=>{e.preventDefault();e.stopPropagation();if(HUD.promptFn){HUD.promptFn();HUD.promptFn=null;}});
  $('#pbtn').onclick=()=>openPause();$('#radarWrap').onclick=()=>openPause();$('#skip').onclick=e=>{e.stopPropagation();if(HUD.onTap)HUD.onTap();};
- document.querySelectorAll('#pmenu button').forEach(b=>b.onclick=()=>{const p=b.dataset.p;if(p==='resume')closePause();else if(p==='save'){saveGame();HUD.help('Jogo salvo.',2);closePause();}else if(p==='quit'){closePause();toMenu();}else if(p==='estudo'){openEstudo('erros');}else showTab(p);});
+ document.querySelectorAll('#pmenu button').forEach(b=>b.onclick=()=>{const p=b.dataset.p;if(p==='resume')closePause();else if(p==='save'){saveGame();HUD.help('Jogo salvo.',2);closePause();}else if(p==='quit'){closePause();toMenu();}else if(p==='estudo'){openEstudo('erros');}else if(p==='unstuck'){closePause();try{unstuckPlayer();}catch(e){}}else showTab(p);});
  addEventListener('keydown',e=>{const k=e.key.toLowerCase();if((k==='escape'||k==='p'||k==='m')&&typeof EST!=='undefined'&&EST.open){closeEstudo();return;}if(k==='escape'||k==='p'||k==='m'){if(G.shopOpen){const bs=document.querySelectorAll('#ask button');bs.length&&bs[bs.length-1].click();return;}if(G.paused)closePause();else openPause();}
   if((k===' '||k==='enter')&&HUD.onTap&&G.cut&&!$('#ask').style.display.includes('block'))HUD.onTap();if(k==='enter'&&HUD._fbGo)HUD._fbGo();
   if($('#ask').style.display==='block'&&HUD.askCb){const i=k==='c'?0:k==='e'?1:'12345'.indexOf(k);if(i>=0){const b=$('#ask').querySelector(`button[data-i="${i}"]`);if(b)b.click();}}});
@@ -7015,7 +7015,7 @@ function fixRoadBuildings(){let n=0;for(const P of W.polys){if(P.dead||!P.bld||P
 // 2) jogador preso (poste, porta, quina): se tenta andar e não sai do lugar, desencaixa
 const FIX={px:0,pz:0,t:0,vt:0,vx:0,vz:0};
 function updFixes(dt){if(G.cut||G.interior&&false)return;
- if(!PL.car&&PL.alive){const mv=PL.moveDir&&!PL.actLock;const d=Math.hypot(PL.x-FIX.px,PL.z-FIX.pz);
+ if(!PL.car&&PL.alive){const mv=PL.moveDir&&!(PL.actLock>G.t);const d=Math.hypot(PL.x-FIX.px,PL.z-FIX.pz);
   if(mv&&d<dt*.45){FIX.t+=dt;if(FIX.t>.6){FIX.t=0;if(!W.unstick(PL,.42)){const a=Math.atan2(PL.moveDir[0],PL.moveDir[1])+Math.PI/2*(Math.random()<.5?1:-1);const nx=PL.x+Math.sin(a)*.35,nz=PL.z+Math.cos(a)*.35;if(!W.hit(nx,nz,.33)){PL.x=nx;PL.z=nz;}}}}else FIX.t=0;FIX.px=PL.x;FIX.pz=PL.z;}
  // carro do jogador preso: acelerando e parado por mais de 1,2 s → procura espaço livre por perto
  const V=PL.car;if(V){const d=Math.hypot(V.x-FIX.vx,V.z-FIX.vz);if((IN.gpGas>.2||IN.keys&&(IN.keys['w']||IN.keys['s']||IN.keys['arrowup'])||IN.mz||IN.gas)&&d<.01){FIX.vt+=dt;if(FIX.vt>1.2){FIX.vt=0;for(let r=.5;r<=4;r+=.5){let ok=false;for(let k=0;k<12;k++){const a=k/12*Math.PI*2,x=V.x+Math.cos(a)*r,z=V.z+Math.sin(a)*r;if(!vehHitsWorld(V,x,z,V.h)){V.x=x;V.z=z;V.vx=V.vz=0;V.v=0;ok=true;break;}}if(ok)break;}}}else FIX.vt=0;FIX.vx=V.x;FIX.vz=V.z;}}
@@ -7112,6 +7112,56 @@ $('#mEst').onclick=()=>openEstudo('erros');$('#mHow').onclick=()=>{const h=$('#h
 // captura quadro a quadro (usada para gravar o vídeo)
 window.__step=(dt)=>{frame(dt);};
 boot().catch(e=>{console.error(e);$('#ltext').textContent='Erro ao carregar: '+e.message;});
+
+// ---- 91-guard.js ----
+// ===== Proteção contra congelamento da imagem =====
+// Sintoma no tablet: o relógio continua andando, mas a imagem 3D para (o boneco fica parado no mesmo quadro).
+// Causas possíveis: erro dentro de um quadro (impede o desenho) ou perda do contexto gráfico (falta de memória de vídeo).
+// 1) cada parte do quadro roda isolada: um erro na lógica não impede o desenho, e vice-versa
+// 2) se o desenho falha seguidamente, desliga efeitos de imagem, depois sombras, depois baixa o gráfico
+// 3) se o contexto gráfico cair, salva o jogo e recarrega sozinho, voltando direto para o jogo
+// 4) erros aparecem num aviso pequeno na tela (para mandar print) e ficam guardados
+const GUARD={rf:0,last:0,errs:[],lvl:0};
+function guardErr(where,e){const msg=(e&&e.message||String(e)).slice(0,140);const st=(e&&e.stack||'').split('\n').slice(1,2).join('').replace(/.*\//,'').slice(0,60);
+ const now=performance.now();GUARD.errs.push(where+': '+msg);if(GUARD.errs.length>8)GUARD.errs.shift();
+ try{localStorage.setItem('pnf-err',JSON.stringify({t:new Date().toISOString(),e:GUARD.errs}));}catch(_){}
+ if(now-GUARD.last>8000){GUARD.last=now;let el=document.getElementById('guardMsg');if(!el){el=document.createElement('div');el.id='guardMsg';
+   el.style.cssText='position:fixed;left:8px;bottom:8px;max-width:60vw;z-index:9999;background:rgba(120,0,0,.85);color:#fff;font:11px/1.3 monospace;padding:6px 8px;border-radius:6px;pointer-events:none';document.body.appendChild(el);}
+  el.textContent='Aviso técnico ('+where+'): '+msg+(st?' · '+st:'');el.style.display='block';clearTimeout(GUARD.tm);GUARD.tm=setTimeout(()=>{el.style.display='none';},7000);}}
+function guardRender(sc,cm){try{renderMain(sc,cm);GUARD.rf=0;}catch(e){GUARD.rf++;guardErr('imagem',e);
+  if(GUARD.rf>=3){GUARD.rf=0;GUARD.lvl++;
+   if(GUARD.lvl===1){try{PFX.on=false;}catch(_){}}
+   else if(GUARD.lvl===2){try{sun.castShadow=false;R.shadowMap.enabled=false;}catch(_){}}
+   else{try{setQuality('baixo');}catch(_){}}
+   try{R.setRenderTarget(null);}catch(_){}}}}
+frame=function(dt){G.dt=dt;
+ // imagem desligada só faz sentido com o caderno aberto
+ if(G.noRender&&!(typeof EST!=='undefined'&&EST.open))G.noRender=false;
+ try{pollPad(dt);}catch(e){}
+ if(G.mode==='menu'){try{menuCam(dt);G.t+=dt;updPeople(dt);updSignals();}catch(e){guardErr('menu',e);}if(!G.noRender)guardRender(scene,cam);return;}
+ if(G.paused){if(!G.noRender)guardRender(scene,cam);return;}
+ try{step(dt);}catch(e){guardErr('jogo',e);}
+ try{if(typeof updMeal==='function')updMeal(dt);}catch(e){guardErr('refeição',e);}
+ if(!G.noRender){if(typeof MEAL!=='undefined'&&MEAL.on)guardRender(MEAL.scene,MEAL.cam);else guardRender(scene,cam);}};
+window.__render=()=>renderMain(scene,cam);
+// contexto gráfico perdido: salva e recarrega, voltando direto para o jogo
+(function(){const cv=R.domElement;
+ cv.addEventListener('webglcontextlost',ev=>{ev.preventDefault();if(window.__CAPTURE)return;
+  try{if(G.mode==='play'&&!G.demo){saveGame();sessionStorage.setItem('pnf-auto','1');}}catch(_){}
+  let el=document.createElement('div');el.style.cssText='position:fixed;inset:0;z-index:99999;display:grid;place-items:center;background:#000c;color:#fff;font:600 18px system-ui';el.textContent='Recarregando os gráficos…';document.body.appendChild(el);
+  setTimeout(()=>location.reload(),1200);},false);})();
+// depois de recarregar por causa do gráfico, continua o jogo sozinho
+(function(){let auto=false;try{auto=sessionStorage.getItem('pnf-auto')==='1';sessionStorage.removeItem('pnf-auto');}catch(_){}if(!auto)return;
+ const go=()=>{if(!window.__ready)return setTimeout(go,300);try{if(hasSave()){audio();G.demo=false;loadGame();startPlay(false);HUD.help('O jogo recarregou os gráficos para não travar. Progresso mantido.',5);}}catch(e){console.error('auto',e.message);}};go();})();
+// limpa estados que não podem sobreviver à volta pelo menu (poderiam deixar o boneco preso)
+(function(){const sp=startPlay;startPlay=function(fresh){try{CARSEQ.on=false;CARSEQ.proc=false;PL.goCar=null;PL.busyT=0;PL.actLock=0;PL.jumpT=0;PL.y=0;PL.crouch=false;G.cut=false;G.paused=false;G.noRender=false;if(typeof MEAL!=='undefined')MEAL.on=false;}catch(e){}
+  const r=sp(fresh);try{W.unstick(PL,.42);}catch(e){}return r;};})();
+// botão "Destravar" no menu de pausa: tira o jogador (ou o carro) de onde ficou preso e põe na rua livre mais próxima
+function unstuckPlayer(){if(CARSEQ.on){CARSEQ.on=false;CARSEQ.proc=false;}PL.goCar=null;PL.busyT=0;PL.actLock=0;PL.y=0;G.cut=false;
+ if(G.interior){exitInteriorQuick();}
+ const V=PL.car;if(V){for(let r=1;r<=30;r+=1){let ok=false;for(let k=0;k<16;k++){const a=k/16*Math.PI*2,x=V.x+Math.cos(a)*r,z=V.z+Math.sin(a)*r;if(W.onRoad(x,z,0)&&!vehHitsWorld(V,x,z,V.h)){V.x=x;V.z=z;V.vx=V.vz=0;V.v=0;ok=true;break;}}if(ok)break;}}
+ else{const f=W.free(PL.x,PL.z,.6,false);PL.x=f[0];PL.z=f[1];W.unstick(PL,.45);setAnim(PL,'Idle',.1);}
+ CAM.snap=true;HUD.help('Pronto, destravado.',2);}
 
 // ---- 99-tiro.js ----
 // ===== Demonstração curta: só o tiroteio (ativada por window.__TIRO) =====
