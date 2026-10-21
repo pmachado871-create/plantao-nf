@@ -4753,5 +4753,165 @@
 "vezes, contando em voz alta!",
 "CRIANCA",
 "kid"
+],
+"R_0": [
+"Uau! Você ganhou um unicórnio!",
+"CRIANCA",
+"kid"
+],
+"R_1": [
+"Uau! Você ganhou um baú de moedas!",
+"CRIANCA",
+"kid"
+],
+"R_2": [
+"Uau! Você ganhou um dragão!",
+"CRIANCA",
+"kid"
+],
+"R_3": [
+"Uau! Você ganhou um foguete!",
+"CRIANCA",
+"kid"
+],
+"R_4": [
+"Uau! Você ganhou um arco-íris!",
+"CRIANCA",
+"kid"
+],
+"R_5": [
+"Uau! Você ganhou um dinossauro!",
+"CRIANCA",
+"kid"
+],
+"R_6": [
+"Uau! Você ganhou uma coroa!",
+"CRIANCA",
+"kid"
+],
+"R_7": [
+"Uau! Você ganhou um golfinho!",
+"CRIANCA",
+"kid"
+],
+"R_8": [
+"Uau! Você ganhou um bolinho!",
+"CRIANCA",
+"kid"
+],
+"R_9": [
+"Uau! Você ganhou um panda!",
+"CRIANCA",
+"kid"
+],
+"R_10": [
+"Uau! Você ganhou uma borboleta!",
+"CRIANCA",
+"kid"
+],
+"R_11": [
+"Uau! Você ganhou um carrossel!",
+"CRIANCA",
+"kid"
+],
+"R_12": [
+"Uau! Você ganhou um polvo!",
+"CRIANCA",
+"kid"
+],
+"R_13": [
+"Uau! Você ganhou uma girafa!",
+"CRIANCA",
+"kid"
+],
+"R_14": [
+"Uau! Você ganhou um sorvete!",
+"CRIANCA",
+"kid"
+],
+"R_15": [
+"Uau! Você ganhou uma baleia!",
+"CRIANCA",
+"kid"
+],
+"R_16": [
+"Uau! Você ganhou um diamante!",
+"CRIANCA",
+"kid"
+],
+"R_17": [
+"Uau! Você ganhou um leão!",
+"CRIANCA",
+"kid"
+],
+"R_18": [
+"Uau! Você ganhou um balão!",
+"CRIANCA",
+"kid"
+],
+"R_19": [
+"Uau! Você ganhou um castelo!",
+"CRIANCA",
+"kid"
+],
+"R_20": [
+"Uau! Você ganhou um pinguim!",
+"CRIANCA",
+"kid"
+],
+"R_21": [
+"Uau! Você ganhou um girassol!",
+"CRIANCA",
+"kid"
+],
+"R_22": [
+"Uau! Você ganhou um papagaio!",
+"CRIANCA",
+"kid"
+],
+"R_23": [
+"Uau! Você ganhou uma tartaruga!",
+"CRIANCA",
+"kid"
+],
+"R_bau": [
+"Você completou a fase! Toque no baú!",
+"CRIANCA",
+"kid"
+],
+"R_album": [
+"Guardei no seu álbum de figurinhas.",
+"CRIANCA",
+"kid"
+],
+"R_esf1": [
+"Você tentou, tentou e conseguiu!",
+"CRIANCA",
+"kid"
+],
+"R_esf2": [
+"Que esforço bonito!",
+"CRIANCA",
+"kid"
+],
+"R_esf3": [
+"Você prestou muita atenção!",
+"CRIANCA",
+"kid"
+],
+"A_intro": [
+"Esse é o seu álbum de figurinhas!",
+"CRIANCA",
+"kid"
+],
+"A_cheio": [
+"Você completou o álbum inteiro! Vamos começar um novo!",
+"CRIANCA",
+"kid"
+],
+"A_falta": [
+"Cada fase que você completa ganha uma figurinha nova.",
+"CRIANCA",
+"kid"
 ]
 }
