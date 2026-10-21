@@ -4913,5 +4913,195 @@
 "Cada fase que você completa ganha uma figurinha nova.",
 "CRIANCA",
 "kid"
+],
+"F_1": [
+"Fase um! Vamos lá!",
+"CRIANCA",
+"kid"
+],
+"F_2": [
+"Fase dois! Vamos lá!",
+"CRIANCA",
+"kid"
+],
+"F_3": [
+"Fase três! Vamos lá!",
+"CRIANCA",
+"kid"
+],
+"F_4": [
+"Fase quatro! Vamos lá!",
+"CRIANCA",
+"kid"
+],
+"F_5": [
+"Fase cinco! Vamos lá!",
+"CRIANCA",
+"kid"
+],
+"F_6": [
+"Fase seis! Vamos lá!",
+"CRIANCA",
+"kid"
+],
+"F_7": [
+"Fase sete! Vamos lá!",
+"CRIANCA",
+"kid"
+],
+"F_8": [
+"Fase oito! Vamos lá!",
+"CRIANCA",
+"kid"
+],
+"F_9": [
+"Fase nove! Vamos lá!",
+"CRIANCA",
+"kid"
+],
+"F_10": [
+"Fase dez! Vamos lá!",
+"CRIANCA",
+"kid"
+],
+"F_mapa": [
+"Toque na fase que está brilhando!",
+"CRIANCA",
+"kid"
+],
+"F_todas": [
+"Você completou as dez fases! Parabéns!",
+"CRIANCA",
+"kid"
+],
+"B_L": [
+"Estoure os balões com a letra",
+"CRIANCA",
+"kid"
+],
+"B_N": [
+"Estoure os balões com o número",
+"CRIANCA",
+"kid"
+],
+"B_fim": [
+"Estourou todos! Muito bem!",
+"CRIANCA",
+"kid"
+],
+"I_A": [
+"Com que letra começa abelha?",
+"CRIANCA",
+"kid"
+],
+"I_B": [
+"Com que letra começa bola?",
+"CRIANCA",
+"kid"
+],
+"I_C": [
+"Com que letra começa casa?",
+"CRIANCA",
+"kid"
+],
+"I_D": [
+"Com que letra começa dado?",
+"CRIANCA",
+"kid"
+],
+"I_E": [
+"Com que letra começa elefante?",
+"CRIANCA",
+"kid"
+],
+"I_F": [
+"Com que letra começa foca?",
+"CRIANCA",
+"kid"
+],
+"I_G": [
+"Com que letra começa gato?",
+"CRIANCA",
+"kid"
+],
+"I_H": [
+"Com que letra começa hipopótamo?",
+"CRIANCA",
+"kid"
+],
+"I_I": [
+"Com que letra começa igreja?",
+"CRIANCA",
+"kid"
+],
+"I_J": [
+"Com que letra começa jacaré?",
+"CRIANCA",
+"kid"
+],
+"I_L": [
+"Com que letra começa leão?",
+"CRIANCA",
+"kid"
+],
+"I_M": [
+"Com que letra começa macaco?",
+"CRIANCA",
+"kid"
+],
+"I_N": [
+"Com que letra começa navio?",
+"CRIANCA",
+"kid"
+],
+"I_O": [
+"Com que letra começa ovo?",
+"CRIANCA",
+"kid"
+],
+"I_P": [
+"Com que letra começa pato?",
+"CRIANCA",
+"kid"
+],
+"I_Q": [
+"Com que letra começa queijo?",
+"CRIANCA",
+"kid"
+],
+"I_R": [
+"Com que letra começa rato?",
+"CRIANCA",
+"kid"
+],
+"I_S": [
+"Com que letra começa sapo?",
+"CRIANCA",
+"kid"
+],
+"I_T": [
+"Com que letra começa tatu?",
+"CRIANCA",
+"kid"
+],
+"I_U": [
+"Com que letra começa uva?",
+"CRIANCA",
+"kid"
+],
+"I_V": [
+"Com que letra começa vaca?",
+"CRIANCA",
+"kid"
+],
+"I_X": [
+"Com que letra começa xícara?",
+"CRIANCA",
+"kid"
+],
+"I_Z": [
+"Com que letra começa zebra?",
+"CRIANCA",
+"kid"
 ]
 }
