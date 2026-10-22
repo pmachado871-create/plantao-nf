@@ -1,0 +1,158 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Kit do Plantão</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: ficha de equipamento — orçamento de peso fixo no topo, itens agrupados por tipo, cada linha com o botão que abre a busca certa */
+:root{
+ --bg:#eef1f4; --papel:#ffffff; --tinta:#1b2a3c; --suave:#5b6b7d; --linha:#d5dce4;
+ --ambar:#b8790a; --ambarFundo:#fdf1d8; --ok:#2e7d4f; --okFundo:#e3f3e9; --alerta:#b3402a;
+ --disp:'Barlow Condensed','Arial Narrow',sans-serif; --txt:'IBM Plex Sans',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121a24;--papel:#1a2533;--tinta:#e6ecf2;--suave:#97a6b6;--linha:#2c3a4b;--ambar:#f0b33c;--ambarFundo:#3a2c10;--ok:#5cc489;--okFundo:#173326;--alerta:#f07a62;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121a24;--papel:#1a2533;--tinta:#e6ecf2;--suave:#97a6b6;--linha:#2c3a4b;--ambar:#f0b33c;--ambarFundo:#3a2c10;--ok:#5cc489;--okFundo:#173326;--alerta:#f07a62;color-scheme:dark}
+body{background:var(--bg);color:var(--tinta);font:15px/1.5 var(--txt);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 48px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:22px}
+header{padding-top:24px;display:flex;flex-direction:column;gap:6px}
+.selo{font:700 13px var(--disp);letter-spacing:.14em;text-transform:uppercase;color:var(--ambar)}
+h1{font:800 clamp(34px,6vw,52px)/1 var(--disp);margin:0;text-wrap:balance}
+.lead{color:var(--suave);max-width:62ch;margin:0}
+/* orçamento fixo */
+.orc{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px}
+.orcBox{background:var(--papel);border:1px solid var(--linha);border-radius:12px;padding:12px 16px;display:grid;grid-template-columns:1fr auto;gap:8px 16px;align-items:center}
+.orcBox b{font:700 22px var(--disp);letter-spacing:.02em}
+.barra{grid-column:1/-1;height:10px;border-radius:99px;background:var(--linha);overflow:hidden;display:flex}
+.barra i{display:block;height:100%;background:var(--ok);transition:width .3s}
+.barra i.sel{background:var(--ambar)}
+.orcTxt{font:500 13px var(--mono);color:var(--suave);font-variant-numeric:tabular-nums}
+.copiar{font:600 14px var(--txt);background:var(--tinta);color:var(--bg);border:0;border-radius:8px;padding:9px 14px;cursor:pointer}
+.copiar:focus-visible,.item a:focus-visible,.item input:focus-visible{outline:3px solid var(--ambar);outline-offset:2px}
+/* como baixar */
+.como{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.como section{background:var(--papel);border:1px solid var(--linha);border-radius:12px;padding:14px 16px;min-width:0}
+.como h3{font:700 18px var(--disp);letter-spacing:.03em;margin:0 0 6px;text-transform:uppercase}
+.como ol{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px}
+.como code{font:500 13px var(--mono);background:var(--ambarFundo);padding:0 4px;border-radius:4px}
+/* grupos e itens */
+h2{font:700 24px var(--disp);letter-spacing:.04em;text-transform:uppercase;margin:6px 0 0;display:flex;align-items:baseline;gap:10px}
+h2 small{font:500 13px var(--mono);color:var(--suave);letter-spacing:0;text-transform:none}
+.lista{display:flex;flex-direction:column;border:1px solid var(--linha);border-radius:12px;background:var(--papel);overflow:hidden}
+.item{display:grid;grid-template-columns:auto 1fr auto;gap:4px 14px;align-items:center;padding:12px 16px;border-top:1px solid var(--linha)}
+.item:first-child{border-top:0}
+.item.feito{background:var(--okFundo)}
+.item input{width:22px;height:22px;accent-color:var(--ok);margin:0}
+.info{min-width:0;display:flex;flex-direction:column;gap:2px}
+.nome{font-weight:600;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.prio{font:600 11px var(--txt);letter-spacing:.06em;text-transform:uppercase;padding:1px 7px;border-radius:99px;border:1px solid currentColor}
+.prio.alta{color:var(--alerta)}.prio.media{color:var(--ambar)}.prio.baixa{color:var(--suave)}
+.porque{color:var(--suave);font-size:14px}
+.meta{font:500 12px var(--mono);color:var(--suave)}
+.item a{font:600 14px var(--txt);text-decoration:none;color:var(--tinta);background:var(--ambarFundo);border:1px solid var(--ambar);border-radius:8px;padding:8px 12px;white-space:nowrap}
+.item.feito a{opacity:.6}
+.aviso{background:var(--ambarFundo);border-left:4px solid var(--ambar);padding:12px 16px;border-radius:0 10px 10px 0;margin:0}
+.copiado{font:500 13px var(--mono);color:var(--ok)}
+@media (max-width:560px){.item{grid-template-columns:auto 1fr}.item a{grid-column:2;justify-self:start}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><body>
+
+<div class="wrap">
+ <header>
+  <span class="selo">Plantão Nova Friburgo · lista de material</span>
+  <h1>O que falta baixar</h1>
+  <p class="lead">Cada botão abre a busca já pronta. Baixe, marque a caixinha e, quando juntar alguns, mande tudo num .zip no chat. Eu enxugo, coloco na escala e ponho no jogo.</p>
+ </header>
+
+ <div class="orc"><div class="orcBox">
+  <div><b id="orcNum">0 de 0 itens</b><div class="orcTxt" id="orcTxt"></div></div>
+  <button class="copiar" id="bCopiar" type="button">Copiar lista do que baixei</button>
+  <div class="barra" aria-hidden="true"><i id="barJogo"></i><i class="sel" id="barSel"></i></div>
+ </div></div>
+
+ <div class="como">
+  <section><h3>Sketchfab (modelos 3D)</h3><ol>
+   <li>Entre na sua conta do Sketchfab.</li>
+   <li>Escolha um modelo com licença <code>CC BY</code>, <code>CC0</code> ou <code>Free Standard</code>.</li>
+   <li>Pule os que têm a etiqueta <code>NoAI</code>: o autor não autoriza uso com IA.</li>
+   <li>Toque em Download e escolha <code>glTF</code> ou <code>GLB</code>.</li>
+   <li>Prefira modelos leves (até uns 50 mil triângulos, aparece na página do modelo).</li>
+  </ol></section>
+  <section><h3>Mixamo (animações)</h3><ol>
+   <li>Entre com a conta Adobe (é grátis).</li>
+   <li>Escolha a animação que parecer mais natural.</li>
+   <li>Download: <code>FBX Binary</code>, <code>Without Skin</code>, <code>30 fps</code>.</li>
+   <li>Se aparecer <code>In Place</code>, marque (andar e correr).</li>
+   <li>Personagens: aba Characters, baixe <code>With Skin</code>, <code>T-Pose</code>.</li>
+  </ol></section>
+ </div>
+ <p class="aviso">Hoje o jogo tem cerca de <b>98 MB</b> de download e o limite que combinamos é <b>120 MB</b>. Os pesos abaixo já são depois de eu enxugar cada modelo. A barra acima mostra quanto o que você marcou vai somar.</p>
+
+ <div id="grupos"></div>
+</div>
+
+<script>
+(()=>{
+const SK=q=>'https://sketchfab.com/search?q='+encodeURIComponent(q)+'&type=models&features=downloadable&sort_by=-likeCount';
+const MX=(q,t='Motion%2CMotionPack')=>'https://www.mixamo.com/#/?page=1&query='+encodeURIComponent(q)+'&type='+t;
+const BASE=98,LIM=120;
+// [id, grupo, nome, por que, onde, busca, MB estimado, prioridade]
+const ITENS=[
+ ['viatura','Veículos','Viatura realista (PM ou PC)','Troca a viatura atual por uma de verdade, a que mais aparece nas missões.','sk','police car brazil',3,'alta'],
+ ['onibus','Veículos','Ônibus urbano','Trânsito mais vivo no Centro e pontos de ônibus com sentido.','sk','city bus low poly',2,'media'],
+ ['caminhao','Veículos','Caminhão','Variedade no trânsito e missões de carga roubada.','sk','truck low poly',2,'baixa'],
+ ['heli','Veículos','Helicóptero policial','Para missões especiais e cutscenes de operação.','sk','police helicopter',2.5,'baixa'],
+ ['pm','Pessoas','Policial fardado','Parceiros e colegas de batalhão com farda, em vez de roupa comum.','mxc','police',3,'alta'],
+ ['mulher','Pessoas','Mulheres civis (2 ou 3 tipos)','Hoje há poucas mulheres na rua; deixa a cidade mais real.','mxc','woman',3,'media'],
+ ['ponto','Rua','Ponto de ônibus','Detalhe de rua do Centro, gente esperando.','sk','bus stop',.5,'media'],
+ ['banca','Rua','Banca de jornal','Bem típico do Centro de Friburgo.','sk','newspaper kiosk',.8,'baixa'],
+ ['cone','Rua','Cones e barreira policial','Bloqueios em ocorrências e blitz.','sk','traffic cone police barrier',.3,'alta'],
+ ['lixeira','Rua','Lixeira','Detalhe de calçada.','sk','trash bin low poly',.2,'baixa'],
+ ['banco','Rua','Banco de praça','Para a Praça Getúlio Vargas e NPCs sentados.','sk','park bench',.3,'media'],
+ ['igreja','Prédios','Igreja ou catedral','Marco do Centro (a Catedral de Nova Friburgo).','sk','church brazil',3,'media'],
+ ['posto','Prédios','Posto de gasolina','Cenário de ocorrência de assalto e parada da viatura.','sk','gas station low poly',2,'media'],
+ ['tribunal','Interiores','Tribunal (sala de audiência)','Missões do TJ, Justiça Federal e STF com sala de verdade.','sk','courtroom',3,'alta'],
+ ['interrog','Interiores','Sala de interrogatório','Interrogatórios na DP e na PF.','sk','interrogation room',1.5,'alta'],
+ ['glock','Provas e armas','Pistola (Glock)','Arma do policial mais detalhada na mão.','sk','glock 17',.8,'media'],
+ ['algema','Provas e armas','Algemas','Aparece na prisão do suspeito.','sk','handcuffs',.3,'media'],
+ ['saco','Provas e armas','Saco de provas e celular','Coleta de evidências mais visível.','sk','evidence bag',.4,'baixa'],
+ ['notebook','Provas e armas','Notebook','Provas digitais em missões da PF.','sk','laptop low poly',.3,'baixa'],
+ ['arauc','Natureza','Araucária','Árvore típica da serra: deixa a paisagem com cara de Friburgo.','sk','araucaria tree',1,'media'],
+ ['a_rende','Animações','Suspeito se rendendo (mãos para cima)','Abordagens e fim de tiroteio.','mx','surrender',.1,'alta'],
+ ['a_ajoelha','Animações','Ajoelhar','Suspeito no chão durante a prisão.','mx','kneeling',.1,'alta'],
+ ['a_medo','Animações','Civil assustado correndo','Gente fugindo quando começa o tiroteio.','mx','terrified',.1,'alta'],
+ ['a_lado','Animações','Andar de lado mirando','Movimento de combate mais real.','mx','pistol strafe',.1,'media'],
+ ['a_fuzil','Animações','Andar com fuzil','Para quando estiver com o fuzil.','mx','rifle walk',.1,'media'],
+ ['a_cobre','Animações','Se proteger atrás de algo','Cobertura atrás de carro ou parede.','mx','cover',.1,'media'],
+ ['a_cont','Animações','Continência','Cutscenes no batalhão e na formatura.','mx','salute',.1,'media'],
+ ['a_palma','Animações','Aplaudir','Fim de missão e cerimônias.','mx','clapping',.1,'baixa'],
+ ['a_cel','Animações','Mexendo no celular','NPCs parados na rua.','mx','texting',.1,'baixa'],
+ ['a_fem','Animações','Andar feminino','Para as mulheres civis andarem natural.','mx','female walk',.1,'media'],
+ ['a_briga','Animações','Discussão (gesticulando)','Ocorrências de briga e desinteligência.','mx','arguing',.1,'media'],
+ ['a_empurra','Animações','Empurrar','Briga e abordagem.','mx','push',.1,'baixa'],
+ ['a_caixa','Animações','Carregando caixa','Levando material apreendido.','mx','carrying',.1,'baixa'],
+];
+const GRUPOS=[...new Set(ITENS.map(i=>i[1]))];
+const KEY='kit-plantao-v1';let feito={};try{feito=JSON.parse(localStorage.getItem(KEY)||'{}');}catch(e){}
+const salvar=()=>{try{localStorage.setItem(KEY,JSON.stringify(feito));}catch(e){}};
+const link=i=>i[4]==='sk'?SK(i[5]):i[4]==='mxc'?MX(i[5],'Character'):MX(i[5]);
+const onde=i=>i[4]==='sk'?'Abrir no Sketchfab':'Abrir no Mixamo';
+const pr={alta:'prioridade alta',media:'média',baixa:'baixa'};
+const fmt=n=>n.toLocaleString('pt-BR',{maximumFractionDigits:1});
+function desenha(){
+ document.getElementById('grupos').innerHTML=GRUPOS.map(g=>{const its=ITENS.filter(i=>i[1]===g);const mb=its.reduce((a,i)=>a+i[6],0);
+  return `<h2>${g}<small>${its.length} itens · cerca de ${fmt(mb)} MB</small></h2><div class="lista">`+its.map(i=>`<div class="item ${feito[i[0]]?'feito':''}">
+   <input type="checkbox" id="c_${i[0]}" data-id="${i[0]}" ${feito[i[0]]?'checked':''} aria-label="Já baixei: ${i[2]}">
+   <label class="info" for="c_${i[0]}"><span class="nome">${i[2]} <span class="prio ${i[7]}">${pr[i[7]]}</span></span><span class="porque">${i[3]}</span><span class="meta">busca: “${i[5]}” · ~${fmt(i[6])} MB</span></label>
+   <a href="${link(i)}" target="_blank" rel="noopener">${onde(i)}</a></div>`).join('')+'</div>';}).join('');
+ document.querySelectorAll('.item input').forEach(c=>c.onchange=()=>{feito[c.dataset.id]=c.checked;if(!c.checked)delete feito[c.dataset.id];salvar();desenha();});
+ const sel=ITENS.filter(i=>feito[i[0]]),mb=sel.reduce((a,i)=>a+i[6],0),tot=BASE+mb;
+ document.getElementById('orcNum').textContent=sel.length+' de '+ITENS.length+' itens baixados';
+ document.getElementById('orcTxt').textContent='jogo '+fmt(BASE)+' MB + marcados '+fmt(mb)+' MB = '+fmt(tot)+' de '+LIM+' MB'+(tot>LIM?' · passou do limite':'');
+ document.getElementById('barJogo').style.width=(BASE/LIM*100)+'%';document.getElementById('barSel').style.width=Math.min(100-BASE/LIM*100,mb/LIM*100)+'%';
+}
+document.getElementById('bCopiar').onclick=async()=>{const sel=ITENS.filter(i=>feito[i[0]]);const t=sel.length?'Baixei para o Plantão:\n'+sel.map(i=>'- '+i[2]).join('\n'):'Ainda não marquei nenhum item.';
+ const b=document.getElementById('bCopiar');try{await navigator.clipboard.writeText(t);b.textContent='Copiado';}catch(e){b.textContent='Não deu para copiar';}setTimeout(()=>b.textContent='Copiar lista do que baixei',1800);};
+desenha();
+})();
+</script>
+</body></html>
