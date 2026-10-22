@@ -5020,10 +5020,11 @@ function rigClips(root){root.updateMatrixWorld(true);const B=boneMap(root),Q=THR
   Aim:()=>mk('Aim',2,8,t=>({...AIM,thL:.06,thR:-.08,knL:.12,knR:.08})),
   AimWalk:()=>mk('AimWalk',1.0,20,gait(1.0,.38,.9,0,1.3,[.2,0],.05,.05,0,.02,AIM)),
   AimRun:()=>mk('AimRun',.7,18,gait(.7,.6,1.2,0,1.2,[.2,0],.12,.06,0,.035,AIM)),
-  HandsUp:()=>mk('HandsUp',1.6,12,t=>({lowL:-1.15,lowR:-1.15,elL:.35+.05*sn(t*8),elR:.35+.05*sn(t*8),swL:-.15,swR:-.15,lean:-.02,hp:-.05})),
+  HandsUp:()=>mk('HandsUp',1.6,16,t=>({lowL:0,lowR:0,elL:1.75+.05*sn(t*PI*2.5),elR:1.75+.05*sn(t*PI*2.5+1),awL:-1.6,awR:1.6,swL:-.1,swR:-.1,lean:-.03,hp:-.04})),
   Cuffed:()=>mk('Cuffed',2,6,t=>({lowL:1.25,lowR:1.25,swL:-.55,swR:-.55,awL:.35,awR:-.35,elL:.55,elR:.55,lean:.08,hp:.15})),
   CuffedWalk:()=>mk('CuffedWalk',1.15,20,gait(1.15,.35,.85,0,1.25,[.55,0],.08,.05,0,.02,{lowL:1.25,lowR:1.25,swL:-.55,swR:-.55,awL:.35,awR:-.35,elL:.55,elR:.55})),
-  Kneel:()=>mk('Kneel',2,4,t=>({thL:1.45,knL:1.6,thR:-.1,knR:2.2,lowL:-1.1,lowR:-1.1,elL:.4,elR:.4,lean:.1,bob:-.32})),
+  KneelHands:()=>mk('KneelHands',2,8,t=>({thL:0,thR:0,knL:1.55,knR:1.55,ftL:.6,ftR:.6,bob:-.40,lowL:-.35,lowR:-.35,elL:2.5+.04*sn(t*PI),elR:2.5+.04*sn(t*PI),awL:-1.6,awR:1.6,swL:.7,swR:.7,lean:.03})),
+  Kneel:()=>mk('Kneel',2,4,t=>({thL:1.45,knL:1.6,thR:-.1,knR:2.2,lowL:1.1,lowR:1.1,elL:.9,elR:.9,swL:.6,swR:.6,lean:.25,bob:-.32})),
   Drive:()=>mk('Drive',2,6,t=>({thL:1.45,thR:1.45,knL:1.45,knR:1.45,lowL:.75,lowR:.75,awL:-1.1,awR:1.1,elL:.55,elR:.55,swL:.25,swR:.25,lean:-.05})),
   Sit:()=>mk('Sit',3,6,t=>({thL:1.5,thR:1.5,knL:1.5,knR:1.5,lowL:1.15,lowR:1.15,elL:1.0,elR:1.0,swL:.45,swR:.45,lean:.05,hp:.05*sn(t*2)})),
   Talk:()=>mk('Talk',2.4,24,t=>{const w=sn(2*PI*t/1.2);return{lowL:1.34,lowR:.85,elL:.15,elR:1.25+.18*w,swL:.05,swR:.35+.12*w,awR:.12*sn(2*PI*t/2.4),lean:.02,hy:.08*sn(2*PI*t/2.4)};}),
@@ -5118,7 +5119,7 @@ function makePerson(kind,seed,opts){seed=seed===undefined?Math.floor(rnd()*1e6):
  }else{P.model=blockHuman({skin:SKINS[Math.floor(r()*5)],top:kind==='policia'?'#30353d':kind==='terno'?'#2b2f36':SHIRTS[Math.floor(r()*10)],pants:PANTS[Math.floor(r()*5)]});P.g.add(P.model);}
  scene.add(P.g);HUM.list.push(P);setAnim(P,'Idle',0);return P;}
 function attachTo(P,bone,mesh,x,y,z){const ws=bone.getWorldScale(new V3());mesh.scale.multiplyScalar(1/(ws.x||1)*(P.g.scale.x||1));mesh.position.set(x/(ws.x||1),y/(ws.x||1),z/(ws.x||1));bone.add(mesh);return mesh;}
-function setAnim(P,name,fade=.18,speed=1){if(!P.mixer){P.anim=name;return;}if(P.gunRifle&&RIFALIAS[name]&&P.actions[RIFALIAS[name]])name=RIFALIAS[name];if(P.hitLock&&G.t<P.hitLock&&name!=='Fall'&&name!=='Hit'&&name!=='HandsUp'&&name!=='Kneel')return;if(P.actLock&&G.t<P.actLock&&name!=='Fall'&&name!=='Hit')return;if(P.anim===name){if(P.actions[name])P.actions[name].timeScale=speed*((P.tsMul&&P.tsMul[name])||1);return;}const nx=P.actions[name];if(!nx)return;const cur=P.actions[P.anim];
+function setAnim(P,name,fade=.18,speed=1){if(!P.mixer){P.anim=name;return;}if(P.gunRifle&&RIFALIAS[name]&&P.actions[RIFALIAS[name]])name=RIFALIAS[name];if(P.hitLock&&G.t<P.hitLock&&name!=='Fall'&&name!=='Hit'&&name!=='HandsUp'&&name!=='Kneel'&&name!=='KneelHands')return;if(P.actLock&&G.t<P.actLock&&name!=='Fall'&&name!=='Hit')return;if(P.anim===name){if(P.actions[name])P.actions[name].timeScale=speed*((P.tsMul&&P.tsMul[name])||1);return;}const nx=P.actions[name];if(!nx)return;const cur=P.actions[P.anim];
  nx.reset();nx.timeScale=speed*((P.tsMul&&P.tsMul[name])||1);if(P.desync&&(name==='Idle'||name==='Talk'||name==='Talk2'||name==='Phone'||name==='Drive'||name==='Sit'))nx.time=Math.random()*nx.getClip().duration;nx.enabled=true;nx.setEffectiveWeight(1);nx.play();if(cur&&fade>0)cur.crossFadeTo(nx,fade,false);else if(cur)cur.stop();P.anim=name;}
 function removePerson(P){scene.remove(P.g);const i=HUM.list.indexOf(P);if(i>=0)HUM.list.splice(i,1);if(P.mixer)P.mixer.stopAllAction();}
 function updPeople(dt){const cx=cam.position.x,cz=cam.position.z;for(const P of HUM.list){const d2=(P.x-cx)**2+(P.z-cz)**2;
@@ -5924,7 +5925,10 @@ function updEnemies(dt){const tx=PL.x,tz=PL.z;
  for(const P of CB.enemies){const ai=P.ai;if(!P.alive){if(P.dieT&&G.t-P.dieT>.6&&!P.lying){P.lying=true;}continue;}
   if(P.cuffed){if(P.follow){const L=P.follow,dx=L.x-P.x,dz=L.z-P.z,d=Math.hypot(dx,dz);if(L.car){P.g.visible=false;P.x=L.x;P.z=L.z;continue;}else P.g.visible=true;
     if(d>1.6){const sp=Math.min(3.4,d*1.2);W.move(P,dx/d*sp*dt,dz/d*sp*dt,.3);P.h+=wrapA(Math.atan2(dx,dz)-P.h)*Math.min(1,dt*8);setAnim(P,'CuffedWalk',.2,sp/1.4);}else setAnim(P,'Cuffed',.2);}continue;}
-  if(P.surrendered){P.h+=wrapA(Math.atan2(tx-P.x,tz-P.z)-P.h)*Math.min(1,dt*3);continue;}
+  if(P.surrendered){P.h+=wrapA(Math.atan2(tx-P.x,tz-P.z)-P.h)*Math.min(1,dt*3);
+   // rendido de pé: quando o policial chega perto, manda ajoelhar com as mãos na cabeça
+   if(P.anim==='HandsUp'&&!P.cuffed&&!PL.car&&Math.hypot(tx-P.x,tz-P.z)<5){P.kneelT=(P.kneelT||0)+dt;if(P.kneelT>1.2){P.kneelT=0;if(typeof voxBark==='function')voxBark(pick(['Ajoelha! Mão na cabeça!','De joelhos! Devagar!','Ajoelha aí! Mão na cabeça!']),'m','eu',3);setAnim(P,'KneelHands',.35);}}
+   continue;}
   if(P.fleeing){updFleeing(P,dt);continue;}
   if(P.ai&&P.ai.st==='boca')continue;
   if(ai.stun&&ai.stun>G.t){setAnim(P,'Hit',.2);if(PL.aimT===P&&Math.hypot(P.x-tx,P.z-tz)<9&&P.arrestable&&rnd()<dt*1.5)surrender(P);continue;}
@@ -6072,7 +6076,7 @@ STEPS.footchase={begin(s,st){const t=resolveLoc(s.at);let x=t.x,z=t.z;if(s.near)
   st.arrow=makeArrow('#ff3b30');addBlip(P.x,P.z,'enemy',P);setObjective(s.text||('Alcance ~r~'+P.name+'~w~ e algeme!'));st.far=0;},
  update(s,st,dt){const P=st.P;st.arrow.position.set(P.x,2.6+Math.sin(G.t*4)*.15,P.z);const d=Math.hypot(P.x-PL.x,P.z-PL.z);
   if(P.cuffed)return'done';if(!P.alive){return MIS.fail('O suspeito precisava ser preso vivo.');}
-  if(P.fleeing&&d<1.7&&!PL.car){P.fleeing=false;P.surrendered=true;setAnim(P,'Kneel',.1);HUD.sub('Suspeito dominado! ~b~Algeme~w~ (F).',3);SFX.crash(6);}
+  if(P.fleeing&&d<1.7&&!PL.car){P.fleeing=false;P.surrendered=true;setAnim(P,'KneelHands',.1);HUD.sub('Suspeito dominado! ~b~Algeme~w~ (F).',3);SFX.crash(6);}
   if(P.surrendered&&d<2.0&&(consume('f')||IN.act||G.demo)){IN.act=false;cuff(P);}
   if(P.surrendered)HUD.prompt('ALGEMAR',()=>cuff(P),d<2.0);
   if(d>220){st.far+=dt;if(st.far>9)return MIS.fail('O suspeito fugiu.');}else st.far=0;}};
@@ -6098,7 +6102,7 @@ function fleeDrive(V,dt){if(!V.ai)return;const ai=V.ai,e=ai.e;const me=PL.car||P
 STEPS.arrest={begin(s,st){st.list=CB.enemies.filter(P=>P.alive&&(P.surrendered||P.fleeing||P.suspect)&&!P.cuffed);if(!st.list.length){st.done=true;return;}
   for(const P of st.list){addBlip(P.x,P.z,'enemy',P);}setObjective(s.text||'Prenda os ~r~suspeitos~w~.');},
  update(s,st,dt){if(st.done)return'done';let left=0;for(const P of st.list){if(P.cuffed||!P.alive)continue;left++;const d=Math.hypot(P.x-PL.x,P.z-PL.z);
-   if(P.fleeing&&d<1.7&&!PL.car){P.fleeing=false;P.surrendered=true;setAnim(P,'Kneel',.1);}
+   if(P.fleeing&&d<1.7&&!PL.car){P.fleeing=false;P.surrendered=true;setAnim(P,'KneelHands',.1);}
    if(P.surrendered&&d<2.0){HUD.prompt('ALGEMAR',()=>cuff(P),true);if(consume('f')||G.demo)cuff(P);}}
   if(!left)return'done';if(st.list.some(P=>!P.alive&&P.mustLive))return MIS.fail('O suspeito precisava ser preso vivo.');}};
 // tiroteio (externo ou no interior atual)
@@ -6109,7 +6113,7 @@ STEPS.shootout={begin(s,st){const n=s.n||3;let spots=[];
   if(s.adopt)st.list=st.list.concat(CB.enemies.filter(P=>P.alive&&!P.cuffed&&!st.list.includes(P)));
   if(MIS.flashT&&G.t-MIS.flashT<4){for(const P of st.list){P.ai.stun=G.t+3.2;P.ai.st='combat';}MIS.flashT=0;}
   if(s.par){st.par=s.par;addExtra('par'+MIS.i,'Dominar o local em menos de '+s.par+' s',false);}
-  if(s.hostage){const e=st.list[0];const H=makePerson('civil');H.x=e.x+1.2;H.z=e.z+.6;H.h=e.h;setAnim(H,'Kneel',0);MIS.hostages.push(H);H.alive=true;addBlip(H.x,H.z,'host',H);}
+  if(s.hostage){const e=st.list[0];const H=makePerson('civil');H.x=e.x+1.2;H.z=e.z+.6;H.h=e.h;setAnim(H,'KneelHands',0);MIS.hostages.push(H);H.alive=true;addBlip(H.x,H.z,'host',H);}
   for(const P of st.list)addBlip(P.x,P.z,'enemy',P);setObjective(s.text||('Neutralize os ~r~suspeitos~w~ armados. Prefira a ~b~prisão~w~: mire de perto para que se rendam.'),7);},
  update(s,st,dt){let left=0,surr=0;for(const P of st.list){if(!P.alive||P.cuffed)continue;if(P.surrendered){surr++;const d=Math.hypot(P.x-PL.x,P.z-PL.z);if(d<2){HUD.prompt('ALGEMAR',()=>cuff(P),true);if(consume('f')||G.demo)cuff(P);}continue;}left++;}
   if(!left&&surr&&!st.told){st.told=1;setObjective('Algeme os suspeitos ~b~rendidos~w~.');}
@@ -6255,7 +6259,7 @@ const NEGO=[{l:'Ninguém chega perto! Eu juro que faço uma besteira!',o:[['Calm
 STEPS.negotiate={begin(s,st){G.cut=true;HUD.letterbox(true);st.ten=s.ten||58;st.i=-1;
   let sp=G.interior&&G.interior.spots.enemy?G.interior.spots.enemy[0]:null;const t=sp?[sp.x,sp.z]:W.free(PL.x+Math.sin(PL.h)*7,PL.z+Math.cos(PL.h)*7,.5,false);
   const P=spawnEnemy(t[0],t[1],{arrestable:true,name:s.name||'Sequestrador',acc:.3,hp:120});P.ai.aggro=false;P.h=Math.atan2(PL.x-P.x,PL.z-P.z);setAnim(P,'Aim',0);st.P=P;MIS.named.taker=P;
-  const H=makePerson('civil');const hp=W.free(P.x+Math.sin(P.h)*.9,P.z+Math.cos(P.h)*.9,.3,false);H.x=hp[0];H.z=hp[1];H.h=P.h;setAnim(H,'Kneel',0);H.alive=true;MIS.hostages.push(H);addBlip(H.x,H.z,'host',H);
+  const H=makePerson('civil');const hp=W.free(P.x+Math.sin(P.h)*.9,P.z+Math.cos(P.h)*.9,.3,false);H.x=hp[0];H.z=hp[1];H.h=P.h;setAnim(H,'KneelHands',0);H.alive=true;MIS.hostages.push(H);addBlip(H.x,H.z,'host',H);
   const dx=P.x-PL.x,dz=P.z-PL.z,L=Math.hypot(dx,dz)||1;CAM.ovr={pos:new V3(PL.x-dx/L*1.2+dz/L*.7,1.7,PL.z-dz/L*1.2-dx/L*.7),look:new V3(P.x,1.4,P.z),k:3,fov:46};CAM.snap=true;addExtra('nego','Libertar a refém só com negociação',false);
   st.next=()=>{st.i++;if(st.ten>=100||st.i>=NEGO.length){st.done=1;return;}setAnim(P,'Yell',.3);const R=NEGO[st.i],idx=[0,1,2].sort(()=>rnd()-.5);MIS.lastQ={correct:idx.indexOf(0),n:3};
    HUD.choice({hd:'NEGOCIAÇÃO · TENSÃO '+Math.round(st.ten)+'%',tag:'Escolha as palavras',who:P.name,line:R.l,q:'O que você responde?',opts:idx.map(i=>R.o[i][0]),meter:st.ten},ch=>{const o=R.o[idx[ch]];st.ten=clamp(st.ten+o[1],0,100);const ok=o[1]<0;
