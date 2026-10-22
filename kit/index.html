@@ -45,7 +45,7 @@ h2 small{font:500 13px var(--mono);color:var(--suave);letter-spacing:0;text-tran
 .info{min-width:0;display:flex;flex-direction:column;gap:2px}
 .nome{font-weight:600;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 .prio{font:600 11px var(--txt);letter-spacing:.06em;text-transform:uppercase;padding:1px 7px;border-radius:99px;border:1px solid currentColor}
-.prio.alta{color:var(--alerta)}.prio.media{color:var(--ambar)}.prio.baixa{color:var(--suave)}
+.prio.jogo{color:var(--ok)}.prio.alta{color:var(--alerta)}.prio.media{color:var(--ambar)}.prio.baixa{color:var(--suave)}
 .porque{color:var(--suave);font-size:14px}
 .meta{font:500 12px var(--mono);color:var(--suave)}
 .item a{font:600 14px var(--txt);text-decoration:none;color:var(--tinta);background:var(--ambarFundo);border:1px solid var(--ambar);border-radius:8px;padding:8px 12px;white-space:nowrap}
@@ -85,7 +85,7 @@ h2 small{font:500 13px var(--mono);color:var(--suave);letter-spacing:0;text-tran
    <li>Personagens: aba Characters, baixe <code>With Skin</code>, <code>T-Pose</code>.</li>
   </ol></section>
  </div>
- <p class="aviso">Hoje o jogo tem cerca de <b>98 MB</b> de download e o limite que combinamos é <b>120 MB</b>. Os pesos abaixo já são depois de eu enxugar cada modelo. A barra acima mostra quanto o que você marcou vai somar.</p>
+ <p class="aviso">Hoje o jogo tem cerca de <b>109 MB</b> de download e o limite que combinamos é <b>120 MB</b>. Os pesos abaixo já são depois de eu enxugar cada modelo. A barra acima mostra quanto o que você marcou vai somar.</p>
 
  <div id="grupos"></div>
 </div>
@@ -94,7 +94,9 @@ h2 small{font:500 13px var(--mono);color:var(--suave);letter-spacing:0;text-tran
 (()=>{
 const SK=q=>'https://sketchfab.com/search?q='+encodeURIComponent(q)+'&type=models&features=downloadable&sort_by=-likeCount';
 const MX=(q,t='Motion%2CMotionPack')=>'https://www.mixamo.com/#/?page=1&query='+encodeURIComponent(q)+'&type='+t;
-const BASE=98,LIM=120;
+const BASE=109,LIM=120;
+// itens que já estão no jogo (recebidos e colocados)
+const NOJOGO=new Set(['viatura','onibus','caminhao','heli','ponto','cone','lixeira','banco','igreja','posto','interrog','algema','saco','notebook','a_rende','a_ajoelha','a_lado','a_fuzil']);
 // [id, grupo, nome, por que, onde, busca, MB estimado, prioridade]
 const ITENS=[
  ['viatura','Veículos','Viatura realista (PM ou PC)','Troca a viatura atual por uma de verdade, a que mais aparece nas missões.','sk','police car brazil',3,'alta'],
@@ -132,7 +134,7 @@ const ITENS=[
  ['a_caixa','Animações','Carregando caixa','Levando material apreendido.','mx','carrying',.1,'baixa'],
 ];
 const GRUPOS=[...new Set(ITENS.map(i=>i[1]))];
-const KEY='kit-plantao-v1';let feito={};try{feito=JSON.parse(localStorage.getItem(KEY)||'{}');}catch(e){}
+const KEY='kit-plantao-v1';let feito={};try{feito=JSON.parse(localStorage.getItem(KEY)||'{}');}catch(e){}for(const k of NOJOGO)delete feito[k];
 const salvar=()=>{try{localStorage.setItem(KEY,JSON.stringify(feito));}catch(e){}};
 const link=i=>i[4]==='sk'?SK(i[5]):i[4]==='mxc'?MX(i[5],'Character'):MX(i[5]);
 const onde=i=>i[4]==='sk'?'Abrir no Sketchfab':'Abrir no Mixamo';
@@ -140,13 +142,13 @@ const pr={alta:'prioridade alta',media:'média',baixa:'baixa'};
 const fmt=n=>n.toLocaleString('pt-BR',{maximumFractionDigits:1});
 function desenha(){
  document.getElementById('grupos').innerHTML=GRUPOS.map(g=>{const its=ITENS.filter(i=>i[1]===g);const mb=its.reduce((a,i)=>a+i[6],0);
-  return `<h2>${g}<small>${its.length} itens · cerca de ${fmt(mb)} MB</small></h2><div class="lista">`+its.map(i=>`<div class="item ${feito[i[0]]?'feito':''}">
-   <input type="checkbox" id="c_${i[0]}" data-id="${i[0]}" ${feito[i[0]]?'checked':''} aria-label="Já baixei: ${i[2]}">
-   <label class="info" for="c_${i[0]}"><span class="nome">${i[2]} <span class="prio ${i[7]}">${pr[i[7]]}</span></span><span class="porque">${i[3]}</span><span class="meta">busca: “${i[5]}” · ~${fmt(i[6])} MB</span></label>
+  return `<h2>${g}<small>${its.length} itens · cerca de ${fmt(mb)} MB</small></h2><div class="lista">`+its.map(i=>`<div class="item ${feito[i[0]]||NOJOGO.has(i[0])?'feito':''}">
+   <input type="checkbox" id="c_${i[0]}" data-id="${i[0]}" ${feito[i[0]]||NOJOGO.has(i[0])?'checked':''} ${NOJOGO.has(i[0])?'disabled':''} aria-label="Já baixei: ${i[2]}">
+   <label class="info" for="c_${i[0]}"><span class="nome">${i[2]} ${NOJOGO.has(i[0])?'<span class="prio jogo">já no jogo</span>':`<span class="prio ${i[7]}">${pr[i[7]]}</span>`}</span><span class="porque">${i[3]}</span><span class="meta">busca: “${i[5]}” · ~${fmt(i[6])} MB</span></label>
    <a href="${link(i)}" target="_blank" rel="noopener">${onde(i)}</a></div>`).join('')+'</div>';}).join('');
  document.querySelectorAll('.item input').forEach(c=>c.onchange=()=>{feito[c.dataset.id]=c.checked;if(!c.checked)delete feito[c.dataset.id];salvar();desenha();});
- const sel=ITENS.filter(i=>feito[i[0]]),mb=sel.reduce((a,i)=>a+i[6],0),tot=BASE+mb;
- document.getElementById('orcNum').textContent=sel.length+' de '+ITENS.length+' itens baixados';
+ const sel=ITENS.filter(i=>feito[i[0]]&&!NOJOGO.has(i[0])),mb=sel.reduce((a,i)=>a+i[6],0),tot=BASE+mb;
+ document.getElementById('orcNum').textContent=NOJOGO.size+' de '+ITENS.length+' já no jogo · '+sel.length+' baixados aguardando';
  document.getElementById('orcTxt').textContent='jogo '+fmt(BASE)+' MB + marcados '+fmt(mb)+' MB = '+fmt(tot)+' de '+LIM+' MB'+(tot>LIM?' · passou do limite':'');
  document.getElementById('barJogo').style.width=(BASE/LIM*100)+'%';document.getElementById('barSel').style.width=Math.min(100-BASE/LIM*100,mb/LIM*100)+'%';
 }
