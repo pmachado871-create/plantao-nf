@@ -44,3 +44,13 @@
 2026-10-23 15:38 ok ret_copom gpt-image-1.5 medium
 2026-10-23 15:38 ok ret_advogado gpt-image-1.5 medium
 2026-10-23 15:38 ok ret_promotora gpt-image-1.5 medium
+2026-10-23 17:25 ok painel_madeira gpt-image-1.5 medium
+2026-10-23 17:25 ok parede_presidio gpt-image-1.5 medium
+2026-10-23 17:25 ok tijolinho gpt-image-1.5 medium
+2026-10-23 17:25 ok piso_madeira gpt-image-1.5 medium
+2026-10-23 17:25 ok piso_borracha gpt-image-1.5 medium
+2026-10-23 17:25 ok azulejo_lab gpt-image-1.5 medium
+2026-10-23 17:26 ok outdoor1 gpt-image-1.5 medium
+2026-10-23 17:26 ok outdoor2 gpt-image-1.5 medium
+2026-10-23 17:26 ok outdoor3 gpt-image-1.5 medium
+2026-10-23 17:26 ok outdoor4 gpt-image-1.5 medium
