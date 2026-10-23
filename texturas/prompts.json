@@ -117,5 +117,34 @@
  "cartaz_procurado": {
   "prompt": "A realistic wanted poster in Portuguese 'PROCURA-SE' from a Brazilian police department, with a generic illustrated silhouette instead of a real face, a reward line 'Informações: 181', paper slightly worn, front view, fills the image.",
   "tamanho": "1024x1536"
+ },
+ "arvores": {
+  "prompt": "Two different full Brazilian urban street trees side by side on a fully transparent background: on the left half a leafy green sibipiruna tree with a broad rounded crown, on the right half an ipê tree full of bright yellow flowers. Each tree is centered in its half, trunk base touching the bottom edge, crown reaching near the top, realistic photo cutout, no ground, no shadow.",
+  "tamanho": "1536x1024",
+  "transparente": true
+ },
+ "ret_delegada": {
+  "prompt": "Realistic head-and-shoulders photo portrait of a fictional person (not a real or famous person), looking at the camera, soft studio light, plain dark blue-gray background, no text, no logos, no insignia. Brazilian woman, about 48, chief of a civil police station, short dark hair with a few gray strands, serious but kind expression, dark blazer over a white shirt."
+ },
+ "ret_superintendente": {
+  "prompt": "Realistic head-and-shoulders photo portrait of a fictional person (not a real or famous person), looking at the camera, soft studio light, plain dark blue-gray background, no text, no logos, no insignia. Brazilian man, about 58, senior federal police chief, gray hair, glasses, dark suit and tie, calm authoritative expression."
+ },
+ "ret_rocha": {
+  "prompt": "Realistic head-and-shoulders photo portrait of a fictional person (not a real or famous person), looking at the camera, soft studio light, plain dark blue-gray background, no text, no logos, no insignia. Brazilian man, about 35, federal police agent, short black hair and short beard, black tactical polo shirt, confident expression."
+ },
+ "ret_clara": {
+  "prompt": "Realistic head-and-shoulders photo portrait of a fictional person (not a real or famous person), looking at the camera, soft studio light, plain dark blue-gray background, no text, no logos, no insignia. Brazilian woman, about 30, civil police inspector, brown hair in a ponytail, black polo shirt, attentive expression."
+ },
+ "ret_dias": {
+  "prompt": "Realistic head-and-shoulders photo portrait of a fictional person (not a real or famous person), looking at the camera, soft studio light, plain dark blue-gray background, no text, no logos, no insignia. Brazilian man, about 42, civil police inspector, bald, mustache, dark gray polo shirt, tired but sharp expression."
+ },
+ "ret_copom": {
+  "prompt": "Realistic head-and-shoulders photo portrait of a fictional person (not a real or famous person), looking at the camera, soft studio light, plain dark blue-gray background, no text, no logos, no insignia. Brazilian woman, about 38, police radio dispatcher wearing a headset with microphone, light blue uniform shirt without insignia, focused expression."
+ },
+ "ret_advogado": {
+  "prompt": "Realistic head-and-shoulders photo portrait of a fictional person (not a real or famous person), looking at the camera, soft studio light, plain dark blue-gray background, no text, no logos, no insignia. Brazilian man, about 50, defense lawyer, slicked back hair, expensive navy suit, slight confident smile."
+ },
+ "ret_promotora": {
+  "prompt": "Realistic head-and-shoulders photo portrait of a fictional person (not a real or famous person), looking at the camera, soft studio light, plain dark blue-gray background, no text, no logos, no insignia. Brazilian woman, about 45, public prosecutor, curly black hair, elegant dark suit, firm expression."
  }
 }
