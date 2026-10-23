@@ -19,7 +19,9 @@ for nome, d in P.items():
     alvo = os.path.join(out, nome + '.png')
     if os.path.exists(alvo): continue
     if feitas >= MAX: print('teto da rodada atingido'); break
-    corpo = json.dumps({'model': MODELO, 'prompt': d['prompt'], 'size': d.get('tamanho', '1024x1024'), 'quality': QUAL, 'n': 1}).encode()
+    cfg = {'model': MODELO, 'prompt': d['prompt'], 'size': d.get('tamanho', '1024x1024'), 'quality': d.get('qualidade', QUAL), 'n': 1}
+    if d.get('transparente'): cfg['background'] = 'transparent'; cfg['output_format'] = 'png'
+    corpo = json.dumps(cfg).encode()
     req = urllib.request.Request('https://api.openai.com/v1/images/generations', data=corpo,
         headers={'Authorization': 'Bearer ' + K, 'Content-Type': 'application/json'})
     for tent in range(3):

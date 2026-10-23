@@ -65,5 +65,57 @@
  },
  "telhado": {
   "prompt": "Seamless tileable photo texture, flat front view with no perspective, even soft lighting, no shadows, no objects, no people, fills the whole square image. Top-down view of red-orange clay Roman roof tiles in rows, slightly weathered with dark stains, realistic."
+ },
+ "fac2_res70": {
+  "prompt": "Flat orthographic photo texture, front view with no perspective, even soft daylight, no strong shadows, no people, no sky, no ground, fills the whole square image, seamless tileable. A Brazilian 1980s apartment building facade with exposed red brick bands and white plaster, exactly 4 floors and 4 windows per floor with aluminum frames, some windows with bars."
+ },
+ "fac2_vidro": {
+  "prompt": "Flat orthographic photo texture, front view with no perspective, even soft daylight, no strong shadows, no people, no sky, no ground, fills the whole square image, seamless tileable. A modern Brazilian commercial building facade with dark gray glass and white aluminum composite panels (ACM), exactly 4 floors, clean and contemporary."
+ },
+ "fac2_colonial": {
+  "prompt": "Flat orthographic photo texture, front view with no perspective, even soft daylight, no strong shadows, no people, no sky, no ground, fills the whole square image, seamless tileable. A historic Brazilian colonial facade painted pastel yellow with white trim, tall arched wooden doors and windows painted blue, exactly 2 floors and 4 openings per floor, aged plaster."
+ },
+ "fac2_brise": {
+  "prompt": "Flat orthographic photo texture, front view with no perspective, even soft daylight, no strong shadows, no people, no sky, no ground, fills the whole square image, seamless tileable. A Brazilian 1970s concrete office building facade with horizontal concrete sun-shading slabs and dark windows, exactly 4 floors, weathered gray concrete with rain stains."
+ },
+ "fac2_pastilha": {
+  "prompt": "Flat orthographic photo texture, front view with no perspective, even soft daylight, no strong shadows, no people, no sky, no ground, fills the whole square image, seamless tileable. A Brazilian building facade covered in small beige and brown ceramic mosaic tiles, exactly 4 floors and 4 windows per floor with small balconies."
+ },
+ "fac2_ac": {
+  "prompt": "Flat orthographic photo texture, front view with no perspective, even soft daylight, no strong shadows, no people, no sky, no ground, fills the whole square image, seamless tileable. A simple Brazilian residential building facade, light green painted plaster, exactly 4 floors and 4 windows per floor, metal window grilles, some air conditioners, slightly dirty, wires."
+ },
+ "lojas2": {
+  "prompt": "Flat orthographic photo texture, front view with no perspective, even daylight, no people, no sky. A row of exactly 4 small Brazilian street shops side by side at ground level, each with a sign board with a short Portuguese name (Açougue, Ótica, Papelaria, Bar do Zé), metal roll-up doors open and glass storefronts, fills the whole image.",
+  "tamanho": "1536x1024"
+ },
+ "lojas3": {
+  "prompt": "Flat orthographic photo texture, front view with no perspective, even daylight, no people, no sky. A row of exactly 4 small Brazilian street shops side by side at ground level, each with a sign board with a short Portuguese name (Mercado, Salão de Beleza, Loja de Roupas, Pastelaria), metal roll-up doors open and glass storefronts, fills the whole image.",
+  "tamanho": "1536x1024"
+ },
+ "serra1": {
+  "prompt": "Wide panoramic photo of green forested mountain ridges of the Serra dos Órgãos near Nova Friburgo, Brazil, seen from a valley town, layered hills fading with atmospheric haze, granite peaks, only the mountains with a fully transparent sky above, horizontally continuous so the left and right edges match, realistic.",
+  "tamanho": "1536x1024",
+  "transparente": true
+ },
+ "serra2": {
+  "prompt": "Wide panoramic photo of rolling green Atlantic forest hills and a few rocky peaks in the mountains of Rio de Janeiro state, layered ridges with light haze, only the mountains with a fully transparent sky above, horizontally continuous so the left and right edges match, realistic.",
+  "tamanho": "1536x1024",
+  "transparente": true
+ },
+ "capa": {
+  "prompt": "Cinematic video game key art for a Brazilian police game called PLANTÃO NOVA FRIBURGO: a white and blue Brazilian police patrol car with lights on parked on a wet street of a small mountain town at dusk, historic colonial houses, green mountains in the mist behind, dramatic lighting, realistic, no text except the title PLANTÃO NOVA FRIBURGO in bold letters at the top.",
+  "tamanho": "1536x1024"
+ },
+ "carregando": {
+  "prompt": "Cinematic realistic photo of a Brazilian police station front desk at night, warm fluorescent light, radio on the counter, case folders, a city map on the wall, no people, no text, moody, video game loading screen background.",
+  "tamanho": "1536x1024"
+ },
+ "cartaz_disque": {
+  "prompt": "A realistic Brazilian public safety poster on a wall, text in Portuguese: 'DISQUE DENÚNCIA 181 — O ANONIMATO É GARANTIDO', blue and yellow design, simple and clean, front view, fills the image.",
+  "tamanho": "1024x1536"
+ },
+ "cartaz_procurado": {
+  "prompt": "A realistic wanted poster in Portuguese 'PROCURA-SE' from a Brazilian police department, with a generic illustrated silhouette instead of a real face, a reward line 'Informações: 181', paper slightly worn, front view, fills the image.",
+  "tamanho": "1024x1536"
  }
 }
