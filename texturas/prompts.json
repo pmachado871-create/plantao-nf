@@ -180,5 +180,24 @@
  "outdoor4": {
   "prompt": "Realistic outdoor billboard advertisement artwork, landscape, clean professional design, Portuguese text, fictional brand (not a real company), bright and readable from far away, fills the whole image. Ad for a fictional chocolate shop: text 'CHOCOLATES DA SERRA — Artesanal desde 1987', photo of handmade chocolates, brown and gold tones.",
   "tamanho": "1536x1024"
+ },
+ "porta_madeira": {
+  "prompt": "Flat orthographic photo texture of a single closed interior door seen exactly from the front, the door fills the entire image edge to edge (no wall around it), even lighting, no shadows, no text. Brazilian office interior door in medium brown wood with simple horizontal grooves and a metal lever handle on the right.",
+  "tamanho": "1024x1536"
+ },
+ "porta_metal": {
+  "prompt": "Flat orthographic photo texture of a single closed interior door seen exactly from the front, the door fills the entire image edge to edge (no wall around it), even lighting, no shadows, no text. Gray painted steel institutional door with a small reinforced glass window at the top and a metal lever handle on the right, slightly scuffed, police station style.",
+  "tamanho": "1024x1536"
+ },
+ "neon_boate": {
+  "prompt": "Glowing neon sign on a fully transparent background, text 'LUA VERMELHA' in red neon script with a crescent moon, and below it the smaller word 'BOATE' in pink neon, night club sign, realistic neon tubes, no wall, nothing else.",
+  "tamanho": "1536x1024",
+  "transparente": true
+ },
+ "parede_veludo": {
+  "prompt": "Seamless tileable photo texture, flat front view with no perspective, even soft lighting, no shadows, no objects, no people, fills the whole square image. Dark red velvet tufted wall upholstery with buttons, nightclub interior, slightly glossy."
+ },
+ "piso_boate": {
+  "prompt": "Seamless tileable photo texture, flat front view with no perspective, even soft lighting, no shadows, no objects, no people, fills the whole square image. Top-down view of a glossy black nightclub floor with subtle dark gray marble veins and small reflections."
  }
 }
