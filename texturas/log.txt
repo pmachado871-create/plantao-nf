@@ -9,3 +9,15 @@
 2026-10-23 14:08 ok asfalto gpt-image-1.5 medium
 2026-10-23 14:08 ok calcada gpt-image-1.5 medium
 2026-10-23 14:08 ok grama gpt-image-1.5 medium
+2026-10-23 14:59 ok parede_int gpt-image-1.5 medium
+2026-10-23 14:59 ok piso_ceramica gpt-image-1.5 medium
+2026-10-23 15:00 ok forro gpt-image-1.5 medium
+2026-10-23 15:00 ok carpete gpt-image-1.5 medium
+2026-10-23 15:00 ok marmore gpt-image-1.5 medium
+2026-10-23 15:00 ok concreto gpt-image-1.5 medium
+2026-10-23 15:01 ok madeira gpt-image-1.5 medium
+2026-10-23 15:01 ok metal gpt-image-1.5 medium
+2026-10-23 15:01 ok terra gpt-image-1.5 medium
+2026-10-23 15:01 ok azulejo gpt-image-1.5 medium
+2026-10-23 15:01 ok portuguesa gpt-image-1.5 medium
+2026-10-23 15:01 ok telhado gpt-image-1.5 medium
