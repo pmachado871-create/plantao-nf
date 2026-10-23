@@ -21,3 +21,17 @@
 2026-10-23 15:01 ok azulejo gpt-image-1.5 medium
 2026-10-23 15:01 ok portuguesa gpt-image-1.5 medium
 2026-10-23 15:01 ok telhado gpt-image-1.5 medium
+2026-10-23 15:10 ok fac2_res70 gpt-image-1.5 medium
+2026-10-23 15:10 ok fac2_vidro gpt-image-1.5 medium
+2026-10-23 15:10 ok fac2_colonial gpt-image-1.5 medium
+2026-10-23 15:10 ok fac2_brise gpt-image-1.5 medium
+2026-10-23 15:11 ok fac2_pastilha gpt-image-1.5 medium
+2026-10-23 15:11 ok fac2_ac gpt-image-1.5 medium
+2026-10-23 15:11 ok lojas2 gpt-image-1.5 medium
+2026-10-23 15:11 ok lojas3 gpt-image-1.5 medium
+2026-10-23 15:12 ok serra1 gpt-image-1.5 medium
+2026-10-23 15:12 ok serra2 gpt-image-1.5 medium
+2026-10-23 15:12 ok capa gpt-image-1.5 medium
+2026-10-23 15:12 ok carregando gpt-image-1.5 medium
+2026-10-23 15:13 ok cartaz_disque gpt-image-1.5 medium
+2026-10-23 15:13 ok cartaz_procurado gpt-image-1.5 medium
