@@ -29,5 +29,41 @@
  },
  "grama": {
   "prompt": "Seamless tileable top-down photo texture of short green urban grass with small dry patches, natural color, even lighting, no shadows, fills the whole square image."
+ },
+ "parede_int": {
+  "prompt": "Seamless tileable photo texture, flat front view with no perspective, even soft lighting, no shadows, no objects, no people, fills the whole square image. Interior wall of a Brazilian public office, painted light beige matte plaster with subtle imperfections and a slightly darker lower band, realistic."
+ },
+ "piso_ceramica": {
+  "prompt": "Seamless tileable photo texture, flat front view with no perspective, even soft lighting, no shadows, no objects, no people, fills the whole square image. Top-down view of a light gray-beige ceramic floor with 4 by 4 large square tiles and thin grout lines, slightly worn, typical Brazilian police station floor."
+ },
+ "forro": {
+  "prompt": "Seamless tileable photo texture, flat front view with no perspective, even soft lighting, no shadows, no objects, no people, fills the whole square image. Ceiling seen from below: white suspended drop ceiling with 4 by 4 square mineral fiber tiles and thin metal grid, realistic office ceiling."
+ },
+ "carpete": {
+  "prompt": "Seamless tileable photo texture, flat front view with no perspective, even soft lighting, no shadows, no objects, no people, fills the whole square image. Top-down view of dark blue-gray commercial office carpet, fine woven texture, slightly worn."
+ },
+ "marmore": {
+  "prompt": "Seamless tileable photo texture, flat front view with no perspective, even soft lighting, no shadows, no objects, no people, fills the whole square image. Top-down view of polished light gray granite floor tiles, 2 by 2 large tiles, subtle speckles, typical Brazilian courthouse lobby floor."
+ },
+ "concreto": {
+  "prompt": "Seamless tileable photo texture, flat front view with no perspective, even soft lighting, no shadows, no objects, no people, fills the whole square image. Top-down view of a worn industrial warehouse polished concrete floor with stains and expansion joint lines, realistic."
+ },
+ "madeira": {
+  "prompt": "Seamless tileable photo texture, flat front view with no perspective, even soft lighting, no shadows, no objects, no people, fills the whole square image. Rough pine wooden planks of a shipping crate, horizontal boards, natural light brown color, realistic."
+ },
+ "metal": {
+  "prompt": "Seamless tileable photo texture, flat front view with no perspective, even soft lighting, no shadows, no objects, no people, fills the whole square image. Corrugated painted steel wall of a shipping container, vertical ridges, slightly scratched and rusty paint, neutral gray color."
+ },
+ "terra": {
+  "prompt": "Seamless tileable photo texture, flat front view with no perspective, even soft lighting, no shadows, no objects, no people, fills the whole square image. Top-down view of compacted brown dirt ground with small stones and tire marks, rural road, realistic."
+ },
+ "azulejo": {
+  "prompt": "Seamless tileable photo texture, flat front view with no perspective, even soft lighting, no shadows, no objects, no people, fills the whole square image. White square ceramic wall tiles of a Brazilian kitchen or snack bar, 6 by 6 tiles with gray grout, slightly glossy, clean."
+ },
+ "portuguesa": {
+  "prompt": "Seamless tileable photo texture, flat front view with no perspective, even soft lighting, no shadows, no objects, no people, fills the whole square image. Top-down view of Brazilian Portuguese pavement (calçada portuguesa) with black and white stone mosaic in a wave pattern like Copacabana, realistic."
+ },
+ "telhado": {
+  "prompt": "Seamless tileable photo texture, flat front view with no perspective, even soft lighting, no shadows, no objects, no people, fills the whole square image. Top-down view of red-orange clay Roman roof tiles in rows, slightly weathered with dark stains, realistic."
  }
 }
