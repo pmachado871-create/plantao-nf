@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Gerar imagens que ainda faltam
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI || secrets.OPENAI_API_KEY || secrets.OPENAI_KEY || secrets.CHAVE_OPENAI || secrets.CHAVEOPENAI || secrets.OPEN_AI }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI || secrets.OPENIA || secrets.OPENAI_API_KEY || secrets.OPENAI_KEY || secrets.CHAVE_OPENAI || secrets.CHAVEOPENAI || secrets.OPEN_AI }}
           MODELO: ${{ github.event.inputs.modelo }}
           QUALIDADE: ${{ github.event.inputs.qualidade }}
         run: python3 texturas/gera.py
