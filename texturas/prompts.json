@@ -146,5 +146,39 @@
  },
  "ret_promotora": {
   "prompt": "Realistic head-and-shoulders photo portrait of a fictional person (not a real or famous person), looking at the camera, soft studio light, plain dark blue-gray background, no text, no logos, no insignia. Brazilian woman, about 45, public prosecutor, curly black hair, elegant dark suit, firm expression."
+ },
+ "painel_madeira": {
+  "prompt": "Seamless tileable photo texture, flat front view with no perspective, even soft lighting, no shadows, no objects, no people, fills the whole square image. Courtroom wall with dark brown wood paneling in vertical panels with a thin molding, polished, elegant Brazilian courthouse interior."
+ },
+ "parede_presidio": {
+  "prompt": "Seamless tileable photo texture, flat front view with no perspective, even soft lighting, no shadows, no objects, no people, fills the whole square image. Prison cell block wall: concrete block wall painted in two tones, gray-green lower half and off-white upper half, worn paint, scratches, institutional."
+ },
+ "tijolinho": {
+  "prompt": "Seamless tileable photo texture, flat front view with no perspective, even soft lighting, no shadows, no objects, no people, fills the whole square image. Exposed red brick wall with light gray mortar, slightly uneven, typical Brazilian restaurant or bar interior."
+ },
+ "piso_madeira": {
+  "prompt": "Seamless tileable photo texture, flat front view with no perspective, even soft lighting, no shadows, no objects, no people, fills the whole square image. Top-down view of medium brown wooden floor boards, slightly worn varnish, restaurant floor."
+ },
+ "piso_borracha": {
+  "prompt": "Seamless tileable photo texture, flat front view with no perspective, even soft lighting, no shadows, no objects, no people, fills the whole square image. Top-down view of black rubber gym floor tiles with small colored flecks, 2 by 2 tiles."
+ },
+ "azulejo_lab": {
+  "prompt": "Seamless tileable photo texture, flat front view with no perspective, even soft lighting, no shadows, no objects, no people, fills the whole square image. Clean white glossy ceramic wall tiles of a forensic laboratory, small rectangular tiles with thin light gray grout."
+ },
+ "outdoor1": {
+  "prompt": "Realistic outdoor billboard advertisement artwork, landscape, clean professional design, Portuguese text, fictional brand (not a real company), bright and readable from far away, fills the whole image. Ad for a fictional lingerie factory store in Nova Friburgo (the Brazilian lingerie capital): text 'MODA ÍNTIMA SERRANA — Direto da fábrica, Nova Friburgo', elegant pink and white, product photo of folded lingerie (no model).",
+  "tamanho": "1536x1024"
+ },
+ "outdoor2": {
+  "prompt": "Realistic outdoor billboard advertisement artwork, landscape, clean professional design, Portuguese text, fictional brand (not a real company), bright and readable from far away, fills the whole image. Ad for a fictional mountain restaurant: text 'TRUTA DA SERRA — Restaurante · Mury, Nova Friburgo', photo of grilled trout dish with mountains behind, green and wood tones.",
+  "tamanho": "1536x1024"
+ },
+ "outdoor3": {
+  "prompt": "Realistic outdoor billboard advertisement artwork, landscape, clean professional design, Portuguese text, fictional brand (not a real company), bright and readable from far away, fills the whole image. Public safety campaign ad from the city: text 'BEBEU, NÃO DIRIJA. Nova Friburgo agradece.', a car key and a glass, blue and white, clean.",
+  "tamanho": "1536x1024"
+ },
+ "outdoor4": {
+  "prompt": "Realistic outdoor billboard advertisement artwork, landscape, clean professional design, Portuguese text, fictional brand (not a real company), bright and readable from far away, fills the whole image. Ad for a fictional chocolate shop: text 'CHOCOLATES DA SERRA — Artesanal desde 1987', photo of handmade chocolates, brown and gold tones.",
+  "tamanho": "1536x1024"
  }
 }
