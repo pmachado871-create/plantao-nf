@@ -54,3 +54,8 @@
 2026-10-23 17:26 ok outdoor2 gpt-image-1.5 medium
 2026-10-23 17:26 ok outdoor3 gpt-image-1.5 medium
 2026-10-23 17:26 ok outdoor4 gpt-image-1.5 medium
+2026-10-23 19:54 ok porta_madeira gpt-image-1.5 medium
+2026-10-23 19:54 ok porta_metal gpt-image-1.5 medium
+2026-10-23 19:54 ok neon_boate gpt-image-1.5 medium
+2026-10-23 19:55 ok parede_veludo gpt-image-1.5 medium
+2026-10-23 19:55 ok piso_boate gpt-image-1.5 medium
