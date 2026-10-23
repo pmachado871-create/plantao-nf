@@ -199,5 +199,144 @@
  },
  "piso_boate": {
   "prompt": "Seamless tileable photo texture, flat front view with no perspective, even soft lighting, no shadows, no objects, no people, fills the whole square image. Top-down view of a glossy black nightclub floor with subtle dark gray marble veins and small reflections."
+ },
+ "pixo1": {
+  "prompt": "Brazilian 'pixação' graffiti tag in black spray paint, tall angular runic letters typical of Rio de Janeiro and São Paulo street tagging, drips, on a fully transparent background, isolated, nothing else, no wall, no shadow. ",
+  "tamanho": "1536x1024",
+  "transparente": true
+ },
+ "pixo2": {
+  "prompt": "Colorful Brazilian street graffiti piece with bubble letters reading 'FRIBURGO' in orange, blue and white spray paint with black outline and highlights, on a fully transparent background, isolated, nothing else, no wall, no shadow. ",
+  "tamanho": "1536x1024",
+  "transparente": true
+ },
+ "pixo3": {
+  "prompt": "Messy black and red spray-painted scribbles and initials on a street wall, crew tag 'NF 22' with a crown, drips, on a fully transparent background, isolated, nothing else, no wall, no shadow. ",
+  "tamanho": "1536x1024",
+  "transparente": true
+ },
+ "pixo4": {
+  "prompt": "Stencil graffiti of a hummingbird and flowers in white and green spray paint, Brazilian street art, on a fully transparent background, isolated, nothing else, no wall, no shadow. ",
+  "tamanho": "1024x1024",
+  "transparente": true
+ },
+ "cartaz1": {
+  "prompt": "Flat front photo of a single item on a wall, fills the frame, even lighting, no perspective. Brazilian street poster lambe-lambe glued on a wall, bright yellow and red, announcing a forró show 'FORRÓ NO PARQUE · SÁBADO 22H · NOVA FRIBURGO', slightly torn edges.",
+  "tamanho": "1024x1536"
+ },
+ "cartaz2": {
+  "prompt": "Flat front photo of a single item on a wall, fills the frame, even lighting, no perspective. Simple printed paper sign 'ALUGA-SE' in big red letters with a phone number '(22) 99999-0000', taped on a wall, slightly wrinkled.",
+  "tamanho": "1024x1536"
+ },
+ "cartaz3": {
+  "prompt": "Flat front photo of a single item on a wall, fills the frame, even lighting, no perspective. Brazilian street poster 'COMPRO OURO · PAGO À VISTA' black and yellow, many repeated copies glued side by side, weathered.",
+  "tamanho": "1024x1536"
+ },
+ "cartaz4": {
+  "prompt": "Flat front photo of a single item on a wall, fills the frame, even lighting, no perspective. Missing dog poster in Portuguese 'PROCURA-SE · CACHORRO PERDIDO · ATENDE POR THOR', photo of a caramel mutt, phone number tabs at the bottom.",
+  "tamanho": "1024x1536"
+ },
+ "cartaz5": {
+  "prompt": "Flat front photo of a single item on a wall, fills the frame, even lighting, no perspective. Colorful church event poster in Portuguese 'GRANDE CULTO DE LOUVOR · DOMINGO 19H · ENTRADA FRANCA', purple and gold, slightly torn.",
+  "tamanho": "1024x1536"
+ },
+ "cartaz6": {
+  "prompt": "Flat front photo of a single item on a wall, fills the frame, even lighting, no perspective. Fictional city council campaign poster in Portuguese with an invented candidate 'JOÃO DA PRAÇA · VEREADOR · 55.123', smiling middle-aged man illustration, blue and white, weathered and partially torn.",
+  "tamanho": "1024x1536"
+ },
+ "chao_oleo": {
+  "prompt": "Top-down view of a dark oil stain on gray asphalt, irregular shape, on a fully transparent background, isolated, nothing else, no wall, no shadow. ",
+  "tamanho": "1024x1024",
+  "transparente": true
+ },
+ "chao_bueiro": {
+  "prompt": "Top-down view of a round cast iron manhole cover with Brazilian pattern and the text 'CEDAE', set in asphalt with a ring of cracked concrete, on a fully transparent background, isolated, nothing else, no wall, no shadow. ",
+  "tamanho": "1024x1024",
+  "transparente": true
+ },
+ "chao_rachadura": {
+  "prompt": "Top-down view of a network of cracks and a small pothole in gray asphalt, on a fully transparent background, isolated, nothing else, no wall, no shadow. ",
+  "tamanho": "1024x1024",
+  "transparente": true
+ },
+ "chao_poca": {
+  "prompt": "Top-down view of a shallow rain puddle on asphalt reflecting gray sky, irregular shape, on a fully transparent background, isolated, nothing else, no wall, no shadow. ",
+  "tamanho": "1024x1024",
+  "transparente": true
+ },
+ "dp_avisos": {
+  "prompt": "Flat front photo of a single item on a wall, fills the frame, even lighting, no perspective. Cork bulletin board in a Brazilian police station full of pinned papers: escala de serviço, memos, wanted photos, a calendar, colored pins.",
+  "tamanho": "1536x1024"
+ },
+ "dp_procurados": {
+  "prompt": "Flat front photo of a single item on a wall, fills the frame, even lighting, no perspective. Police wanted poster in Portuguese 'PROCURADOS · DISQUE DENÚNCIA (21) 2253-1177' with a grid of 8 invented mugshot-style illustrated faces, names and crimes, official layout.",
+  "tamanho": "1024x1536"
+ },
+ "dp_mapa": {
+  "prompt": "Flat front photo of a single item on a wall, fills the frame, even lighting, no perspective. Framed street map of a small Brazilian mountain city with river, colored neighborhood zones and red pins marking incidents, title 'NOVA FRIBURGO · ÁREA DE ATUAÇÃO'.",
+  "tamanho": "1536x1024"
+ },
+ "dp_investigacao": {
+  "prompt": "Flat front photo of a single item on a wall, fills the frame, even lighting, no perspective. Police investigation whiteboard with photos of suspects, a city map, red string connecting clues, handwritten notes in Portuguese like 'suspeito', 'local do crime', 'veículo'.",
+  "tamanho": "1536x1024"
+ },
+ "dp_campanha": {
+  "prompt": "Flat front photo of a single item on a wall, fills the frame, even lighting, no perspective. Brazilian public safety campaign poster 'DROGAS: TÔ FORA! · DENUNCIE 181' with a young person illustration, blue and orange.",
+  "tamanho": "1024x1536"
+ },
+ "dp_brasao": {
+  "prompt": "Generic police shield emblem, blue and gold heraldic badge with stars, laurel and a torch, no real insignia, on a fully transparent background, isolated, nothing else, no wall, no shadow. ",
+  "tamanho": "1024x1024",
+  "transparente": true
+ },
+ "prat_farmacia": {
+  "prompt": "Flat front photo of a single item on a wall, fills the frame, even lighting, no perspective. Front view of a pharmacy shelf fully stocked with colorful medicine boxes, vitamins and shampoo bottles, Brazilian brands invented, neat rows.",
+  "tamanho": "1536x1024"
+ },
+ "prat_mercado": {
+  "prompt": "Flat front photo of a single item on a wall, fills the frame, even lighting, no perspective. Front view of a supermarket shelf stocked with rice packages, beans, coffee, cookies and soda bottles, Brazilian style, invented brands.",
+  "tamanho": "1536x1024"
+ },
+ "geladeira_bebidas": {
+  "prompt": "Flat front photo of a single item on a wall, fills the frame, even lighting, no perspective. Front view of a glass door drinks refrigerator in a Brazilian bar full of beer cans, soda and water bottles, lit from inside.",
+  "tamanho": "1024x1536"
+ },
+ "vitrine_padaria": {
+  "prompt": "Flat front photo of a single item on a wall, fills the frame, even lighting, no perspective. Front view of a Brazilian bakery display case with pão de queijo, coxinhas, sonhos and cakes, warm light.",
+  "tamanho": "1536x1024"
+ },
+ "cardapio_lanche": {
+  "prompt": "Flat front photo of a single item on a wall, fills the frame, even lighting, no perspective. Menu board of a Brazilian snack bar in Portuguese with prices: X-BURGUER R$26, COXINHA R$8, PASTEL R$10, AÇAÍ R$18, CAFÉ R$6, chalkboard style.",
+  "tamanho": "1536x1024"
+ },
+ "placa_pare": {
+  "prompt": "Brazilian red octagonal PARE stop sign on a metal pole, front view, on a fully transparent background, isolated, nothing else, no wall, no shadow. ",
+  "tamanho": "1024x1536",
+  "transparente": true
+ },
+ "placa_rua": {
+  "prompt": "Brazilian blue street name sign 'R. GENERAL OSÓRIO' white letters, small rectangular metal plate with a 'CENTRO' line, front view, on a fully transparent background, isolated, nothing else, no wall, no shadow. ",
+  "tamanho": "1536x1024",
+  "transparente": true
+ },
+ "porta_aco": {
+  "prompt": "Seamless tileable photo texture, flat front view with no perspective, even soft lighting, no objects, fills the whole square image. Closed Brazilian corrugated steel roll-up shop door, gray painted metal slats, slightly dirty and rusty at the bottom, some faded stickers.",
+  "tamanho": "1024x1024"
+ },
+ "muro_chapisco": {
+  "prompt": "Seamless tileable photo texture, flat front view with no perspective, even soft lighting, no objects, fills the whole square image. Brazilian rough cement plaster wall 'chapisco' painted pale yellow, weathered with dirt stains near the bottom.",
+  "tamanho": "1024x1024"
+ },
+ "carpete_vinho": {
+  "prompt": "Seamless tileable photo texture, flat front view with no perspective, even soft lighting, no objects, fills the whole square image. Top-down plush wine red carpet texture of a motel suite, soft fibers.",
+  "tamanho": "1024x1024"
+ },
+ "quadro_suite": {
+  "prompt": "Flat front photo of a single item on a wall, fills the frame, even lighting, no perspective. Framed abstract art print in red, pink and gold tones for a motel suite wall, elegant, not explicit.",
+  "tamanho": "1536x1024"
+ },
+ "cardapio_boate": {
+  "prompt": "Flat front photo of a single item on a wall, fills the frame, even lighting, no perspective. Neon-style nightclub drinks menu board in Portuguese on black: CERVEJA R$15, CAIPIRINHA R$25, UÍSQUE R$38, ENERGÉTICO R$18, pink and purple glow text.",
+  "tamanho": "1024x1536"
  }
 }
