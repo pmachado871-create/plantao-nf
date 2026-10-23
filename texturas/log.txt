@@ -35,3 +35,12 @@
 2026-10-23 15:12 ok carregando gpt-image-1.5 medium
 2026-10-23 15:13 ok cartaz_disque gpt-image-1.5 medium
 2026-10-23 15:13 ok cartaz_procurado gpt-image-1.5 medium
+2026-10-23 15:37 ok arvores gpt-image-1.5 medium
+2026-10-23 15:37 ok ret_delegada gpt-image-1.5 medium
+2026-10-23 15:37 ok ret_superintendente gpt-image-1.5 medium
+2026-10-23 15:37 ok ret_rocha gpt-image-1.5 medium
+2026-10-23 15:37 ok ret_clara gpt-image-1.5 medium
+2026-10-23 15:38 ok ret_dias gpt-image-1.5 medium
+2026-10-23 15:38 ok ret_copom gpt-image-1.5 medium
+2026-10-23 15:38 ok ret_advogado gpt-image-1.5 medium
+2026-10-23 15:38 ok ret_promotora gpt-image-1.5 medium
