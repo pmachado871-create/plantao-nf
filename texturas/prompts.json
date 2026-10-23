@@ -1,0 +1,33 @@
+{
+ "fac_res70": {
+  "prompt": "Flat orthographic photo texture, front view with no perspective, even soft daylight, no strong shadows, no people, no sky, no ground, fills the whole square image, seamless tileable. A 1970s Brazilian residential apartment building facade, exactly 4 floors and 4 windows per floor, painted plaster slightly weathered, small concrete balconies with metal railings."
+ },
+ "fac_vidro": {
+  "prompt": "Flat orthographic photo texture, front view with no perspective, even soft daylight, no strong shadows, no people, no sky, no ground, fills the whole square image, seamless tileable. A modern office building glass curtain wall facade, blue-green reflective glass panels with dark aluminum frames, exactly 4 floors and 4 bays."
+ },
+ "fac_colonial": {
+  "prompt": "Flat orthographic photo texture, front view with no perspective, even soft daylight, no strong shadows, no people, no sky, no ground, fills the whole square image, seamless tileable. A historic Swiss-German colonial townhouse facade from Nova Friburgo, Brazil: cream plaster walls, tall white wooden windows with dark green shutters, exactly 4 floors and 4 windows per floor, slightly aged paint."
+ },
+ "fac_brise": {
+  "prompt": "Flat orthographic photo texture, front view with no perspective, even soft daylight, no strong shadows, no people, no sky, no ground, fills the whole square image, seamless tileable. A Brazilian 1960s modernist building facade with vertical light gray concrete brise-soleil fins over dark windows, exactly 4 floors."
+ },
+ "fac_pastilha": {
+  "prompt": "Flat orthographic photo texture, front view with no perspective, even soft daylight, no strong shadows, no people, no sky, no ground, fills the whole square image, seamless tileable. A Brazilian building facade covered in small light blue-gray ceramic mosaic tiles (pastilhas) with long horizontal ribbon windows, exactly 4 floors."
+ },
+ "fac_ac": {
+  "prompt": "Flat orthographic photo texture, front view with no perspective, even soft daylight, no strong shadows, no people, no sky, no ground, fills the whole square image, seamless tileable. A simple Brazilian apartment building facade, off-white plaster, exactly 4 floors and 4 windows per floor, small air conditioner units under some windows, slightly dirty."
+ },
+ "lojas": {
+  "prompt": "Flat orthographic photo texture, front view with no perspective, even daylight, no people, no sky. A row of exactly 4 small Brazilian street shops side by side at ground level, each with a colorful sign board with a short Portuguese name (Padaria, Farmácia, Bazar, Lanchonete), metal roll-up door partly open and glass storefront, fills the whole image.",
+  "tamanho": "1536x1024"
+ },
+ "asfalto": {
+  "prompt": "Seamless tileable top-down photo texture of worn dark gray asphalt road surface with small cracks and patches, no road markings, even lighting, no shadows, fills the whole square image."
+ },
+ "calcada": {
+  "prompt": "Seamless tileable top-down photo texture of a Brazilian sidewalk with gray concrete square tiles, slightly stained and worn, even lighting, no shadows, fills the whole square image."
+ },
+ "grama": {
+  "prompt": "Seamless tileable top-down photo texture of short green urban grass with small dry patches, natural color, even lighting, no shadows, fills the whole square image."
+ }
+}
