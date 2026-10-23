@@ -1,9 +1,12 @@
 # Gera as texturas do jogo pela API de imagens da OpenAI.
 # Lê texturas/prompts.json ({"nome": {"prompt": "...", "tamanho": "1024x1024"}}), gera só as que ainda não existem
 # em texturas/png/ e para no teto MAX por rodada (para não haver surpresa na fatura). A chave vem do segredo OPENAI.
-import json, os, sys, base64, urllib.request, urllib.error, time
+import json, os, sys, base64, urllib.request, urllib.error, time, traceback
 K = os.environ.get('OPENAI_API_KEY', '').strip()
-if not K: sys.exit('Falta o segredo OPENAI no GitHub (Settings > Secrets and variables > Actions).')
+base0 = os.path.dirname(os.path.abspath(__file__))
+if not K:
+    open(os.path.join(base0, 'log.txt'), 'a').write(time.strftime('%Y-%m-%d %H:%M') + ' SEM CHAVE: o segredo OPENAI nao chegou na rotina\n')
+    print('Falta o segredo OPENAI'); sys.exit(0)
 MODELO = os.environ.get('MODELO') or 'gpt-image-1.5'
 QUAL = os.environ.get('QUALIDADE') or 'medium'
 MAX = 40
@@ -35,5 +38,5 @@ for nome, d in P.items():
             if e.code in (400, 401, 403): break
             time.sleep(10)
         except Exception as e:
-            print('erro', nome, e); time.sleep(10)
+            print('erro', nome, e); log.write(f'erro {nome} {e}\n'); time.sleep(10)
 print('geradas nesta rodada:', feitas)
