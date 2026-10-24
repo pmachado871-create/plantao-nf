@@ -338,5 +338,57 @@
  "cardapio_boate": {
   "prompt": "Flat front photo of a single item on a wall, fills the frame, even lighting, no perspective. Neon-style nightclub drinks menu board in Portuguese on black: CERVEJA R$15, CAIPIRINHA R$25, UÍSQUE R$38, ENERGÉTICO R$18, pink and purple glow text.",
   "tamanho": "1024x1536"
+ },
+ "pixo5": {
+  "prompt": "Brazilian pixação tag in white spray paint, tall straight cryptic letters in a long horizontal line, on a fully transparent background, isolated, nothing else, no wall, no shadow. ",
+  "tamanho": "1536x1024",
+  "transparente": true
+ },
+ "pixo6": {
+  "prompt": "Wildstyle graffiti piece with interlocking letters in purple, yellow and black with arrows and sparkles, on a fully transparent background, isolated, nothing else, no wall, no shadow. ",
+  "tamanho": "1536x1024",
+  "transparente": true
+ },
+ "pixo7": {
+  "prompt": "Graffiti of a smiling cartoon face character with a cap, spray paint, Brazilian street art style, on a fully transparent background, isolated, nothing else, no wall, no shadow. ",
+  "tamanho": "1024x1024",
+  "transparente": true
+ },
+ "pixo8": {
+  "prompt": "Faded political slogan painted on a wall in Portuguese 'FORA CORRUPÇÃO' in red brush letters with drips, on a fully transparent background, isolated, nothing else, no wall, no shadow. ",
+  "tamanho": "1536x1024",
+  "transparente": true
+ },
+ "cartaz7": {
+  "prompt": "Flat front photo of a single item on a wall, fills the frame, even lighting, no perspective. Brazilian street poster lambe-lambe 'BAILE FUNK · SEXTA · MC TRAVESSO' neon green and black, torn corners.",
+  "tamanho": "1024x1536"
+ },
+ "cartaz8": {
+  "prompt": "Flat front photo of a single item on a wall, fills the frame, even lighting, no perspective. Printed sign in Portuguese 'VENDE-SE ESTE IMÓVEL · TRATAR NO LOCAL' red and white, taped, weathered.",
+  "tamanho": "1024x1536"
+ },
+ "cartaz9": {
+  "prompt": "Flat front photo of a single item on a wall, fills the frame, even lighting, no perspective. Brazilian circus poster 'CIRCO ESTRELA · GRANDE ESTREIA' colorful vintage style with clown and tent, weathered.",
+  "tamanho": "1024x1536"
+ },
+ "cartaz10": {
+  "prompt": "Flat front photo of a single item on a wall, fills the frame, even lighting, no perspective. Small business flyer in Portuguese 'CONSERTO DE CELULAR · TELAS · BATERIAS' blue and white with a phone illustration.",
+  "tamanho": "1024x1536"
+ },
+ "outdoor5": {
+  "prompt": "Brazilian roadside billboard advertisement, fills the frame edge to edge, no frame, no sky: invented supermarket chain 'SUPER SERRANO · OFERTAS DA SEMANA' with produce photos and prices, green and yellow.",
+  "tamanho": "1536x1024"
+ },
+ "outdoor6": {
+  "prompt": "Brazilian roadside billboard advertisement, fills the frame edge to edge, no frame, no sky: invented beer brand 'SERRA GELADA · CERVEJA DE MONTANHA' with frosty bottle and mountains, blue tones.",
+  "tamanho": "1536x1024"
+ },
+ "outdoor7": {
+  "prompt": "Brazilian roadside billboard advertisement, fills the frame edge to edge, no frame, no sky: invented private college 'FACULDADE FRIBURGO · VESTIBULAR 2027 · INSCREVA-SE' smiling students, orange and navy.",
+  "tamanho": "1536x1024"
+ },
+ "outdoor8": {
+  "prompt": "Brazilian roadside billboard, fills the frame edge to edge, no frame, no sky: road safety campaign 'SE BEBER, NÃO DIRIJA · LEI SECA' with car keys and a glass, red and black.",
+  "tamanho": "1536x1024"
  }
 }
