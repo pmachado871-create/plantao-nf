@@ -91,3 +91,15 @@
 2026-10-23 23:49 ok carpete_vinho gpt-image-1.5 medium
 2026-10-23 23:49 ok quadro_suite gpt-image-1.5 medium
 2026-10-23 23:50 ok cardapio_boate gpt-image-1.5 medium
+2026-10-24 00:22 ok pixo5 gpt-image-1.5 medium
+2026-10-24 00:22 ok pixo6 gpt-image-1.5 medium
+2026-10-24 00:22 ok pixo7 gpt-image-1.5 medium
+2026-10-24 00:22 ok pixo8 gpt-image-1.5 medium
+2026-10-24 00:23 ok cartaz7 gpt-image-1.5 medium
+2026-10-24 00:23 ok cartaz8 gpt-image-1.5 medium
+2026-10-24 00:23 ok cartaz9 gpt-image-1.5 medium
+2026-10-24 00:23 ok cartaz10 gpt-image-1.5 medium
+2026-10-24 00:24 ok outdoor5 gpt-image-1.5 medium
+2026-10-24 00:24 ok outdoor6 gpt-image-1.5 medium
+2026-10-24 00:24 ok outdoor7 gpt-image-1.5 medium
+2026-10-24 00:24 ok outdoor8 gpt-image-1.5 medium
