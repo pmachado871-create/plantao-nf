@@ -1,0 +1,189 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0;font:14px system-ui}[hidden]{display:none!important}</style></head><body><title>Plano do Plantão</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap">
+<style>
+/* Layout: ficha de serviço — barra de progresso no topo, fases empilhadas, cada item com seletor de 3 posições */
+:root{
+ --bg:#f3f4f6; --card:#ffffff; --fg:#17202b; --muted:#5d6977; --line:#dde1e6;
+ --navy:#1d3a63; --accent:#c98a12;
+ --feito:#2e7d4f; --falta:#b23b2e; --depois:#6b5fb5;
+ --feito-bg:#e3f2e9; --falta-bg:#f8e4e1; --depois-bg:#ebe8f7;
+ --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+ --body:"Source Sans 3","Segoe UI",Roboto,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+ --bg:#10151c; --card:#18202a; --fg:#e7ebf0; --muted:#9aa6b4; --line:#2a3542;
+ --navy:#8fb3e6; --accent:#e5a93a;
+ --feito:#5fc28a; --falta:#ee7a6b; --depois:#a99cf0;
+ --feito-bg:#173325; --falta-bg:#3a1d19; --depois-bg:#25213f; color-scheme:dark}}
+:root[data-theme="dark"]{
+ --bg:#10151c; --card:#18202a; --fg:#e7ebf0; --muted:#9aa6b4; --line:#2a3542;
+ --navy:#8fb3e6; --accent:#e5a93a;
+ --feito:#5fc28a; --falta:#ee7a6b; --depois:#a99cf0;
+ --feito-bg:#173325; --falta-bg:#3a1d19; --depois-bg:#25213f; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.45}
+.wrap{max-width:900px;margin:0 auto;padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:18px}
+header{display:flex;flex-direction:column;gap:6px}
+.eyebrow{font:700 13px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+h1{font:700 clamp(30px,6vw,44px)/1.02 var(--display);margin:0;color:var(--navy);text-wrap:balance;letter-spacing:.01em}
+.sub{color:var(--muted);margin:0;max-width:62ch}
+.summary{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:10px}
+.totals{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;font-variant-numeric:tabular-nums}
+.big{font:700 34px/1 var(--display);color:var(--fg)}
+.tot{display:flex;align-items:center;gap:6px;font-weight:600}
+.dot{width:10px;height:10px;border-radius:50%}
+.bar{display:flex;height:12px;border-radius:6px;overflow:hidden;background:var(--line)}
+.bar span{display:block;height:100%;transition:width .25s}
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.filters button{font:600 14px var(--body);border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:999px;padding:6px 12px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:var(--bg)}
+.save{margin-left:auto;font-size:13px;color:var(--muted)}
+section.fase{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.fh{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.fn{font:700 15px/1 var(--display);color:var(--bg);background:var(--navy);border-radius:6px;padding:5px 8px;letter-spacing:.04em}
+.ft{font:700 22px/1.1 var(--display);margin:0;flex:1;min-width:0;letter-spacing:.01em}
+.fc{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.minibar{width:100%;display:flex;height:4px;border-radius:2px;overflow:hidden;background:var(--line)}
+.minibar span{height:100%}
+.item{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 16px;padding:12px 16px;border-top:1px solid var(--line);align-items:center}
+.item:first-of-type{border-top:0}
+.it{font-weight:600;margin:0}
+.sg{margin:2px 0 0;color:var(--muted);font-size:14px}
+.tag{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-left:6px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg button{font:600 13px var(--body);border:0;background:transparent;color:var(--muted);padding:7px 11px;cursor:pointer;min-width:62px}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button[aria-pressed="true"][data-v="feito"]{background:var(--feito-bg);color:var(--feito)}
+.seg button[aria-pressed="true"][data-v="falta"]{background:var(--falta-bg);color:var(--falta)}
+.seg button[aria-pressed="true"][data-v="depois"]{background:var(--depois-bg);color:var(--depois)}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.empty{padding:14px 16px;color:var(--muted);font-size:14px}
+@media (max-width:620px){.item{grid-template-columns:minmax(0,1fr)}.seg{justify-self:start}}
+@media (prefers-reduced-motion:reduce){.bar span{transition:none}}
+</style>
+
+<div class="wrap">
+ <header>
+  <div class="eyebrow">Plantão Nova Friburgo · versão 1.0</div>
+  <h1>Plano de acabamento</h1>
+  <p class="sub">Marque cada item como <b>Feito</b>, <b>Falta</b> ou <b>Depois</b>. As marcações ficam salvas e eu consigo ler daqui para saber por onde seguir.</p>
+ </header>
+ <div class="summary" aria-live="polite">
+  <div class="totals" id="totals"></div>
+  <div class="bar" id="bar"></div>
+  <div class="filters" id="filters">
+   <button type="button" id="f-todos" data-f="todos" aria-pressed="true">Todos</button>
+   <button type="button" id="f-falta" data-f="falta" aria-pressed="false">Falta</button>
+   <button type="button" id="f-feito" data-f="feito" aria-pressed="false">Feito</button>
+   <button type="button" id="f-depois" data-f="depois" aria-pressed="false">Depois</button>
+   <span class="save" id="save">Carregando…</span>
+  </div>
+ </div>
+ <div id="fases"></div>
+</div>
+
+<script>
+const FASES=[
+ {n:1,t:'Conceito',items:[
+  ['c1','Ideia central: policial em Nova Friburgo, estilo GTA, estudando para concursos','Escrever em uma frase e deixar na tela inicial','feito'],
+  ['c2','Plataforma: app no tablet, controle, TV','Testar controle físico e Chromecast','feito'],
+  ['c3','Objetivo: estudo pessoal com ação policial','Definir o peso de estudo, ação e vida na cidade','parcial'],
+  ['c4','Pilares do jogo (3 ou 4 ideias que guiam tudo)','Estudar jogando, procedimento correto, Friburgo reconhecível, missões que não travam','falta'],
+  ['c5','Escopo da versão 1.0','Fechar a lista e parar de abrir frentes novas até a 1.0','falta']]},
+ {n:2,t:'História',items:[
+  ['h1','Linhas de missão PF e PCERJ a partir dos casos','Manter como base','feito'],
+  ['h2','Personagens que dão as missões (Valente, Helena, COPOM)','Personalidade e falas que se repetem entre missões','parcial'],
+  ['h3','Arco principal com vilão ou facção e um final','Organização em Friburgo desmontada caso a caso','falta'],
+  ['h4','Cutscenes de abertura, promoção e final','Abertura do jogo, cena de promoção, cena final','parcial'],
+  ['h5','Carreira na história (subir de posto)','Promoções liberam capítulos','falta']]},
+ {n:3,t:'Mundo: Nova Friburgo e bairros',items:[
+  ['m1','Mapa real: ruas, prédios, rodoviária, praça, zona rural, serra','Manter','feito'],
+  ['m2','Sedes: PF, DP, fórum, presídio, IML, hospital','Manter','feito'],
+  ['m3','Interiores (DP, lojas, bar, boate, suíte, apartamento, galpão)','Revisar luz, portas e objetos um por um','parcial'],
+  ['m4','Bairros com identidade (Centro, Olaria, Conselheiro, Cônego)','Fachadas e objetos diferentes por bairro','parcial'],
+  ['m5','Rua viva: pichos, cartazes, outdoors, marcas no asfalto','Placas de PARE e de rua, porta de aço, fios','parcial'],
+  ['m6','Noite com chuva, reflexos, postes e giroflex iluminando','Prioridade gráfica número 1','falta'],
+  ['m7','Comunidades para operações de boca de fumo','Becos e escadarias nos bairros afastados','parcial']]},
+ {n:4,t:'Personagens',items:[
+  ['p1','Modelos variados de civis','Manter','feito'],
+  ['p2','Protagonista com farda PMERJ','Farda azul com brasão, tarjeta, colete e boné','parcial'],
+  ['p3','Policiais de apoio, PF e PCERJ','Uniformes e coletes por corporação','parcial'],
+  ['p4','Retratos das cutscenes iguais aos modelos 3D','Refazer a partir dos modelos (ex.: a Delegada)','falta'],
+  ['p5','Suspeitos e traficantes com visual próprio','Roupas, bonés, rádios, armas visíveis','parcial'],
+  ['p6','Modelos novos do Sketchfab (viatura, policial)','Viatura e policial com colete mudam mais o visual','feito']]},
+ {n:5,t:'Movimentos e animações',items:[
+  ['a1','Andar, correr, dirigir, atirar, cair','Manter','feito'],
+  ['a2','Procedimentos: algemar, revistar, render, rádio, perícia','Manter','feito'],
+  ['a3','Gestos das cutscenes e cenas a dois da boate','Manter','feito'],
+  ['a4','Animações prontas e sem uso (revista na parede, abrigo, rádio)','Colocar nas missões certas','parcial'],
+  ['a5','Pole dance e animações mais naturais','Refazer no Hunyuan Motion','falta'],
+  ['a6','Movimentos táticos: cobertura, entrada em cômodo, escudo','Pacote novo de BVH focado em operação','parcial']]},
+ {n:6,t:'Jogabilidade e sistemas',items:[
+  ['s1','Direção, trânsito dia e noite, pedestres que reagem','Manter','feito'],
+  ['s2','Combate: tiro, rendição, prisão','Ajustar mira no tablet e IA dos suspeitos','parcial'],
+  ['s3','Mérito, dinheiro, fome, aparência, embriaguez, atropelamento','Manter','feito'],
+  ['s4','Promoções de posto ligadas ao mérito','Mostrar posto atual e o que falta','parcial'],
+  ['s5','Caderno de estudos com as questões erradas','Revisão por matéria','feito'],
+  ['s6','Controle físico e toque no tablet','Ajustar botões e sensibilidade','parcial'],
+  ['s7','Salvar e continuar de onde parou','Salvar no meio da missão','parcial'],
+  ['s8','Botão "Desistir da missão" e "Voltar à sede"','Saída de emergência para qualquer travamento','falta']]},
+ {n:7,t:'Missões',items:[
+  ['q1','Banco de casos com questões (cerca de 360 em 22 matérias)','Manter','feito'],
+  ['q2','Tipos de missão: perícia, perseguição, tiroteio, prisão, escolta, oitiva','Mais variedade; muitas seguem a mesma receita','parcial'],
+  ['q3','Missões sem travar (portas, NPCs, saída de prédio)','Robô roda todas e eu corrijo uma por uma','parcial'],
+  ['q4','Lista de missões com status (testada, com erro, corrigida)','Planilha preenchida pelo robô','falta'],
+  ['q5','Ocorrências de boca de fumo nos bairros afastados','Fuga a pé, apreensão, flagrante, cerco','parcial'],
+  ['q6','Avaliação no fim da missão','Tela de resultado com nota e o que errou','falta']]},
+ {n:8,t:'Arte, áudio e interface',items:[
+  ['v1','Texturas geradas por IA','Manter','feito'],
+  ['v2','Efeitos: sombras, SSAO, brilho, faróis, janelas à noite','Chuva, reflexos, luz dos postes e do giroflex','parcial'],
+  ['v3','Vozes de IA nas cutscenes, sem voz do tablet','Manter','feito'],
+  ['v4','Sons: sirene, rádio, tiros, ambiente','Rádio da PM com códigos reais, mais sons de rua','parcial'],
+  ['v5','HUD, menus e mapa','Menos texto na tela, objetivo mais claro','parcial'],
+  ['v6','Música','Trilha para menu, perseguição e tiroteio','falta']]},
+ {n:9,t:'Tecnologia',items:[
+  ['t1','App no tablet via GitHub, atualização automática','Manter','feito'],
+  ['t2','Geração de texturas pela chave da OpenAI','Recarregar créditos quando precisar','feito'],
+  ['t3','Desempenho no tablet','Medir no seu tablet e criar modo leve','parcial'],
+  ['t4','Tamanho do download (93 MB de 120 MB)','Comprimir modelos e áudios','parcial'],
+  ['t5','Organização do código (correções empilhadas)','Juntar as correções nos arquivos originais','falta']]},
+ {n:10,t:'Testes e versão final',items:[
+  ['z1','Robô que joga as missões sozinho','Rodar todas e gerar relatório de erros','parcial'],
+  ['z2','Seus testes no tablet com lista de problemas','Anotar cada travamento num só lugar','falta'],
+  ['z3','Versão 1.0 congelada','Depois dela, só correções','falta'],
+  ['z4','Lições para o Papa Mike','Registrar o que funcionou e o que não','falta']]}
+];
+const LBL={feito:'Feito',falta:'Falta',depois:'Depois'};
+const COLOR={feito:'var(--feito)',falta:'var(--falta)',depois:'var(--depois)'};
+const LS='plano-plantao-v1';
+let state={},filter='todos',db=null,ref=null,timer=null,saving=false,dirty=false;
+function initial(){const s={};for(const f of FASES)for(const it of f.items)s[it[0]]=it[3]==='feito'?'feito':'falta';return s;}
+state=initial();
+try{const l=JSON.parse(localStorage.getItem(LS)||'null');if(l)Object.assign(state,l);}catch(e){}
+function counts(items){const c={feito:0,falta:0,depois:0};for(const it of items)c[state[it[0]]]++;return c;}
+function barHTML(c,total,cls){return ['feito','falta','depois'].map(k=>`<span style="width:${total?c[k]/total*100:0}%;background:${COLOR[k]}" title="${LBL[k]}: ${c[k]}"></span>`).join('');}
+function esc(s){return s.replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));}
+function render(){
+ const all=FASES.flatMap(f=>f.items),c=counts(all),T=all.length;
+ document.getElementById('totals').innerHTML=`<span class="big">${Math.round(c.feito/T*100)}%</span><span style="color:var(--muted)">feito</span>`+['feito','falta','depois'].map(k=>`<span class="tot"><span class="dot" style="background:${COLOR[k]}"></span>${LBL[k]} ${c[k]}</span>`).join('');
+ document.getElementById('bar').innerHTML=barHTML(c,T);
+ document.getElementById('fases').innerHTML=FASES.map(f=>{const fc=counts(f.items);const vis=f.items.filter(it=>filter==='todos'||state[it[0]]===filter);
+  return `<section class="fase" style="margin-bottom:14px"><div class="fh"><span class="fn">FASE ${f.n}</span><h2 class="ft">${esc(f.t)}</h2><span class="fc">${fc.feito}/${f.items.length} feitos</span><div class="minibar">${barHTML(fc,f.items.length)}</div></div>`+
+  (vis.length?vis.map(it=>`<div class="item"><div style="min-width:0"><p class="it">${esc(it[1])}${it[3]==='parcial'?'<span class="tag">começado</span>':''}</p><p class="sg">${esc(it[2])}</p></div><div class="seg" role="group" aria-label="Situação">${['feito','falta','depois'].map(v=>`<button type="button" id="b-${it[0]}-${v}" data-id="${it[0]}" data-v="${v}" aria-pressed="${state[it[0]]===v}">${LBL[v]}</button>`).join('')}</div></div>`).join(''):`<div class="empty">Nenhum item com “${LBL[filter]}” nesta fase.</div>`)+`</section>`;}).join('');
+}
+function setSave(t){document.getElementById('save').textContent=t;}
+async function flush(){if(!ref){return;}if(saving){dirty=true;return;}saving=true;setSave('Salvando…');
+ try{await ref.set({s:state,em:new Date().toISOString()});setSave('Salvo');}catch(e){setSave(e&&e.code==='invalid_argument'?'Sem permissão para salvar':'Não salvou — tente de novo');}
+ saving=false;if(dirty){dirty=false;flush();}}
+document.getElementById('fases').addEventListener('click',e=>{const b=e.target.closest('button[data-id]');if(!b)return;state[b.dataset.id]=b.dataset.v;
+ try{localStorage.setItem(LS,JSON.stringify(state));}catch(x){}render();clearTimeout(timer);timer=setTimeout(flush,500);if(!ref)setSave('Salvo só neste aparelho');});
+document.getElementById('filters').addEventListener('click',e=>{const b=e.target.closest('button[data-f]');if(!b)return;filter=b.dataset.f;document.querySelectorAll('#filters button').forEach(x=>x.setAttribute('aria-pressed',x===b));render();});
+render();
+(async()=>{try{db=window.claude&&window.claude.use?await window.claude.use('db'):null;}catch(e){db=null;}
+ if(!db){setSave('Salvo só neste aparelho');return;}
+ ref=db.doc('plano/status');let first=true;
+ ref.onSnapshot(snap=>{if(snap.exists){const d=snap.data();if(d&&d.s&&!snap.metadata.hasPendingWrites){state=Object.assign(initial(),d.s);try{localStorage.setItem(LS,JSON.stringify(state));}catch(x){}render();}}
+  if(first){first=false;setSave(snap.exists?'Salvo':'Pronto');}},err=>setSave('Sem conexão com o salvamento'));})();
+</script>
+</body></html>
